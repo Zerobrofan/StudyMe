@@ -73,8 +73,6 @@ namespace Gamey
             this.phoneBox = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.addressBox = new System.Windows.Forms.TextBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.lastNameBox = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.studGrid)).BeginInit();
             this.panel1.SuspendLayout();
             this.scorePanel.SuspendLayout();
@@ -125,23 +123,23 @@ namespace Gamey
             this.label2.Font = new System.Drawing.Font("Century Gothic", 13F, System.Drawing.FontStyle.Bold);
             this.label2.Location = new System.Drawing.Point(238, 385);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(106, 22);
+            this.label2.Size = new System.Drawing.Size(69, 22);
             this.label2.TabIndex = 5;
-            this.label2.Text = "First Name:";
+            this.label2.Text = "Name:";
             // 
             // nameBox
             // 
             this.nameBox.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nameBox.Location = new System.Drawing.Point(350, 385);
+            this.nameBox.Location = new System.Drawing.Point(313, 385);
             this.nameBox.Name = "nameBox";
-            this.nameBox.Size = new System.Drawing.Size(238, 22);
+            this.nameBox.Size = new System.Drawing.Size(336, 22);
             this.nameBox.TabIndex = 11;
             // 
             // addButton
             // 
             this.addButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.addButton.Font = new System.Drawing.Font("Century Gothic", 12F);
-            this.addButton.Location = new System.Drawing.Point(765, 551);
+            this.addButton.Location = new System.Drawing.Point(765, 504);
             this.addButton.Name = "addButton";
             this.addButton.Size = new System.Drawing.Size(117, 39);
             this.addButton.TabIndex = 5;
@@ -153,7 +151,7 @@ namespace Gamey
             // 
             this.deleteButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.deleteButton.Font = new System.Drawing.Font("Century Gothic", 12F);
-            this.deleteButton.Location = new System.Drawing.Point(1014, 551);
+            this.deleteButton.Location = new System.Drawing.Point(1011, 504);
             this.deleteButton.Name = "deleteButton";
             this.deleteButton.Size = new System.Drawing.Size(117, 39);
             this.deleteButton.TabIndex = 17;
@@ -162,17 +160,18 @@ namespace Gamey
             // 
             // searchBox
             // 
-            this.searchBox.Font = new System.Drawing.Font("Century Gothic", 14F);
+            this.searchBox.Font = new System.Drawing.Font("Arial", 9.75F);
             this.searchBox.Location = new System.Drawing.Point(445, 69);
             this.searchBox.Name = "searchBox";
-            this.searchBox.Size = new System.Drawing.Size(437, 30);
+            this.searchBox.Size = new System.Drawing.Size(437, 22);
             this.searchBox.TabIndex = 18;
+            this.searchBox.TextChanged += new System.EventHandler(this.searchBox_TextChanged);
             // 
             // editButton
             // 
             this.editButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.editButton.Font = new System.Drawing.Font("Century Gothic", 12F);
-            this.editButton.Location = new System.Drawing.Point(891, 551);
+            this.editButton.Location = new System.Drawing.Point(888, 504);
             this.editButton.Name = "editButton";
             this.editButton.Size = new System.Drawing.Size(117, 39);
             this.editButton.TabIndex = 20;
@@ -191,6 +190,8 @@ namespace Gamey
             // 
             // studGrid
             // 
+            this.studGrid.AllowUserToAddRows = false;
+            this.studGrid.AllowUserToDeleteRows = false;
             this.studGrid.AllowUserToResizeColumns = false;
             this.studGrid.AllowUserToResizeRows = false;
             this.studGrid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
@@ -198,8 +199,10 @@ namespace Gamey
             this.studGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.studGrid.Location = new System.Drawing.Point(228, 112);
             this.studGrid.Name = "studGrid";
+            this.studGrid.ReadOnly = true;
             this.studGrid.Size = new System.Drawing.Size(903, 249);
             this.studGrid.TabIndex = 21;
+            this.studGrid.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.studGrid_CellContentClick);
             // 
             // studyMeLabel
             // 
@@ -239,7 +242,7 @@ namespace Gamey
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(210, 650);
+            this.panel1.Size = new System.Drawing.Size(210, 580);
             this.panel1.TabIndex = 22;
             // 
             // button13
@@ -535,7 +538,7 @@ namespace Gamey
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 13F, System.Drawing.FontStyle.Bold);
-            this.label1.Location = new System.Drawing.Point(238, 420);
+            this.label1.Location = new System.Drawing.Point(668, 385);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(120, 22);
             this.label1.TabIndex = 23;
@@ -545,7 +548,7 @@ namespace Gamey
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Century Gothic", 13F, System.Drawing.FontStyle.Bold);
-            this.label5.Location = new System.Drawing.Point(238, 455);
+            this.label5.Location = new System.Drawing.Point(238, 425);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(83, 22);
             this.label5.TabIndex = 25;
@@ -556,7 +559,7 @@ namespace Gamey
             this.dateBox.CustomFormat = "yyyy-MM-dd";
             this.dateBox.Font = new System.Drawing.Font("Arial", 9.75F);
             this.dateBox.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateBox.Location = new System.Drawing.Point(364, 420);
+            this.dateBox.Location = new System.Drawing.Point(794, 385);
             this.dateBox.MinDate = new System.DateTime(1950, 1, 1, 0, 0, 0, 0);
             this.dateBox.Name = "dateBox";
             this.dateBox.Size = new System.Drawing.Size(237, 22);
@@ -566,7 +569,7 @@ namespace Gamey
             // 
             this.maleButton.AutoSize = true;
             this.maleButton.Font = new System.Drawing.Font("Arial", 9.75F);
-            this.maleButton.Location = new System.Drawing.Point(327, 457);
+            this.maleButton.Location = new System.Drawing.Point(327, 429);
             this.maleButton.Name = "maleButton";
             this.maleButton.Size = new System.Drawing.Size(54, 20);
             this.maleButton.TabIndex = 27;
@@ -578,7 +581,7 @@ namespace Gamey
             // 
             this.femaleButton.AutoSize = true;
             this.femaleButton.Font = new System.Drawing.Font("Arial", 9.75F);
-            this.femaleButton.Location = new System.Drawing.Point(387, 459);
+            this.femaleButton.Location = new System.Drawing.Point(387, 429);
             this.femaleButton.Name = "femaleButton";
             this.femaleButton.Size = new System.Drawing.Size(69, 20);
             this.femaleButton.TabIndex = 28;
@@ -590,7 +593,7 @@ namespace Gamey
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Century Gothic", 13F, System.Drawing.FontStyle.Bold);
-            this.label6.Location = new System.Drawing.Point(482, 455);
+            this.label6.Location = new System.Drawing.Point(482, 425);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(71, 22);
             this.label6.TabIndex = 29;
@@ -599,7 +602,7 @@ namespace Gamey
             // phoneBox
             // 
             this.phoneBox.Font = new System.Drawing.Font("Arial", 10F);
-            this.phoneBox.Location = new System.Drawing.Point(559, 455);
+            this.phoneBox.Location = new System.Drawing.Point(559, 426);
             this.phoneBox.Name = "phoneBox";
             this.phoneBox.Size = new System.Drawing.Size(258, 23);
             this.phoneBox.TabIndex = 30;
@@ -608,7 +611,7 @@ namespace Gamey
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Century Gothic", 13F, System.Drawing.FontStyle.Bold);
-            this.label7.Location = new System.Drawing.Point(238, 490);
+            this.label7.Location = new System.Drawing.Point(238, 465);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(86, 22);
             this.label7.TabIndex = 31;
@@ -617,36 +620,16 @@ namespace Gamey
             // addressBox
             // 
             this.addressBox.Font = new System.Drawing.Font("Arial", 10F);
-            this.addressBox.Location = new System.Drawing.Point(327, 490);
+            this.addressBox.Location = new System.Drawing.Point(327, 465);
             this.addressBox.Name = "addressBox";
             this.addressBox.Size = new System.Drawing.Size(625, 23);
             this.addressBox.TabIndex = 32;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Century Gothic", 13F, System.Drawing.FontStyle.Bold);
-            this.label8.Location = new System.Drawing.Point(610, 385);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(107, 22);
-            this.label8.TabIndex = 33;
-            this.label8.Text = "Last Name:";
-            // 
-            // lastNameBox
-            // 
-            this.lastNameBox.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lastNameBox.Location = new System.Drawing.Point(723, 385);
-            this.lastNameBox.Name = "lastNameBox";
-            this.lastNameBox.Size = new System.Drawing.Size(238, 22);
-            this.lastNameBox.TabIndex = 34;
             // 
             // ProductForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1150, 650);
-            this.Controls.Add(this.lastNameBox);
-            this.Controls.Add(this.label8);
+            this.ClientSize = new System.Drawing.Size(1150, 580);
             this.Controls.Add(this.addressBox);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.phoneBox);
@@ -730,7 +713,5 @@ namespace Gamey
         private System.Windows.Forms.TextBox phoneBox;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox addressBox;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox lastNameBox;
     }
 }

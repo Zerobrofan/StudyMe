@@ -87,7 +87,7 @@ namespace Gamey
 
         private void timeTimer_Tick(object sender, EventArgs e)
         {
-            timeLabel.Text = DateTime.Now.ToString("HH:mm");
+            timeLabel.Text = DateTime.Now.ToString("HH:mm");          
         }
 
         private void stdButton_Click(object sender, EventArgs e)
@@ -111,20 +111,30 @@ namespace Gamey
         SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\abdal\source\repos\Gamey\GameStoreDataBase.mdf;Integrated Security=True;Connect Timeout=30");
         private void addButton_Click(object sender, EventArgs e)
         {
+            //Check if male or female
           string gender =  maleButton.Checked ? "Male" : "Female";
             try
             {
                 con.Open();
-                string query = "insert into stuTable values ('" + nameBox.Text + "','" + lastNameBox.Text + "','" + gender + "','" + phoneBox.Text + "','" + addressBox.Text + "','"+ dateBox.Text+ "')";
-                SqlCommand cmd = new SqlCommand(query, con);
-                cmd.ExecuteNonQuery();
-                MessageBox.Show("Student added successfully");
+                if (String.IsNullOrEmpty(nameBox.Text) || String.IsNullOrEmpty(phoneBox.Text) || String.IsNullOrEmpty(addressBox.Text))
+                {
+                    MessageBox.Show("Missing fields were found. Please make sure all fields are filled");
+                }
+                else
+                {
+                    string query = "insert into stuTable values ('" + nameBox.Text + "','" + gender + "','" + phoneBox.Text + "','" + addressBox.Text + "','" + dateBox.Text + "')";
+                    SqlCommand cmd = new SqlCommand(query, con);
+                    cmd.ExecuteNonQuery();
+                    MessageBox.Show("Student added successfully");
+
+                }
                 con.Close();
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
+            Pobulate();
         }
 
         private void Pobulate()
@@ -133,15 +143,48 @@ namespace Gamey
             string query = "select * from stuTable";
             SqlDataAdapter sda = new SqlDataAdapter(query, con);
             SqlCommandBuilder scd = new SqlCommandBuilder(sda);
-            var ds = new DataSet();
+            DataSet ds = new DataSet();
+            BindingSource bs = new BindingSource();
             sda.Fill(ds);
-            studGrid.DataSource = ds.Tables[0];
-            con.Close();
+            bs.DataSource = ds.Tables[0];           
+            studGrid.DataSource = bs;
+            con.Close();            
         }
 
         private void ProductForm_Load(object sender, EventArgs e)
         {
             Pobulate();
+        }
+
+        private void studGrid_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+           /* nameBox.Text = studGrid.SelectedRows[0].Cells[0].Value.ToString();
+            if(studGrid.SelectedRows[0].Cells[1].Value.ToString() == "Male")
+            {
+                maleButton.Checked = true;              
+            }
+            else {femaleButton.Checked = true; }
+            phoneBox.Text = studGrid.SelectedRows[0].Cells[2].Value.ToString();
+            addressBox.Text = studGrid.SelectedRows[0].Cells[3].Value.ToString();
+            dateBox.Text = studGrid.SelectedRows[0].Cells[4].Value.ToString();
+           */
+        }
+
+        private void searchBox_TextChanged(object sender, EventArgs e)
+        {
+            con.Open();
+            string query = "select * from stuTable";
+            SqlDataAdapter sda = new SqlDataAdapter(query, con);
+            SqlCommandBuilder scd = new SqlCommandBuilder(sda);
+            DataSet ds = new DataSet();
+            BindingSource bs = new BindingSource();
+            sda.Fill(ds);
+            bs.DataSource = ds.Tables[0];
+            studGrid.DataSource = bs;
+            con.Close();
+
+            //Actual search
+            bs.Filter = "Name LIKE '" + searchBox.Text + "%'";
         }
     }
 }
