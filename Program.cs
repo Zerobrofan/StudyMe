@@ -16,7 +16,7 @@ namespace Gamey
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new ProductForm());
+            Application.Run(new StudentForm());
         }
     }
 }

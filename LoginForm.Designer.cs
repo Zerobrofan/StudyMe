@@ -1,7 +1,7 @@
 ﻿
 namespace Gamey
 {
-    partial class Form1
+    partial class LoginForm
     {
         /// <summary>
         /// Required designer variable.
@@ -149,7 +149,7 @@ namespace Gamey
             this.loginButton.Text = "LOGIN";
             this.loginButton.UseVisualStyleBackColor = true;
             // 
-            // Form1
+            // LoginForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -165,7 +165,7 @@ namespace Gamey
             this.Controls.Add(this.minButton);
             this.Controls.Add(this.exitButton);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "Form1";
+            this.Name = "LoginForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Gamey";
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseDown);

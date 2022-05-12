@@ -12,7 +12,7 @@ using System.Data.SqlClient;
 
 namespace Gamey
 {
-    public partial class ProductForm : Form
+    public partial class StudentForm : Form
     {
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
         private extern static void ReleaseCapture();
@@ -29,7 +29,7 @@ namespace Gamey
             int nWidthEllipse,
             int nHeightEllipse
             );
-        public ProductForm()
+        public StudentForm()
         {
             InitializeComponent();
             Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 25, 25));
@@ -156,20 +156,6 @@ namespace Gamey
             Pobulate();
         }
 
-        private void studGrid_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-           /* nameBox.Text = studGrid.SelectedRows[0].Cells[0].Value.ToString();
-            if(studGrid.SelectedRows[0].Cells[1].Value.ToString() == "Male")
-            {
-                maleButton.Checked = true;              
-            }
-            else {femaleButton.Checked = true; }
-            phoneBox.Text = studGrid.SelectedRows[0].Cells[2].Value.ToString();
-            addressBox.Text = studGrid.SelectedRows[0].Cells[3].Value.ToString();
-            dateBox.Text = studGrid.SelectedRows[0].Cells[4].Value.ToString();
-           */
-        }
-
         private void searchBox_TextChanged(object sender, EventArgs e)
         {
             con.Open();
@@ -185,6 +171,49 @@ namespace Gamey
 
             //Actual search
             bs.Filter = "Name LIKE '" + searchBox.Text + "%'";
+        }
+
+        private void deleteButton_Click(object sender, EventArgs e)
+        {
+            
+            try
+            {
+                if(nameBox.Text == "")
+                {
+                    MessageBox.Show("Please select a student to delete");
+                }
+                else
+                {
+                    
+                    con.Open();
+                    string query = "DELETE FROM stuTable WHERE Name LIKE '" + nameBox.Text + "'";
+                    SqlCommand cmd = new SqlCommand(query, con);
+                    cmd.ExecuteNonQuery();
+                    MessageBox.Show("Student deleted successfully");
+                    con.Close();
+                    Pobulate();
+                }
+            }catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void studGrid_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if(e.RowIndex != -1)
+            {
+                DataGridViewRow stuRow = studGrid.Rows[e.RowIndex];
+                nameBox.Text = stuRow.Cells[0].Value.ToString();               
+                if(stuRow.Cells[1].Value.ToString() == "Male")
+                {
+                    maleButton.Checked = true;
+                }
+                else { femaleButton.Checked = true; }
+                phoneBox.Text = stuRow.Cells[2].Value.ToString();
+                addressBox.Text = stuRow.Cells[3].Value.ToString();
+                dateBox.Text = stuRow.Cells[4].Value.ToString();
+            }
         }
     }
 }

@@ -11,7 +11,7 @@ using System.Windows.Forms;
 
 namespace Gamey
 {
-    public partial class Form1 : Form
+    public partial class LoginForm : Form
     {
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
         private extern static void ReleaseCapture();
@@ -28,7 +28,7 @@ namespace Gamey
             int nWidthEllipse,
             int nHeightEllipse
             );
-        public Form1()
+        public LoginForm()
         {
             InitializeComponent();
             Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 25, 25));

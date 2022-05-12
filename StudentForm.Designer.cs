@@ -1,7 +1,7 @@
 ﻿
 namespace Gamey
 {
-    partial class ProductForm
+    partial class StudentForm
     {
         /// <summary>
         /// Required designer variable.
@@ -60,7 +60,6 @@ namespace Gamey
             this.stdManageButton = new System.Windows.Forms.Button();
             this.stdRegisterButton = new System.Windows.Forms.Button();
             this.stdButton = new System.Windows.Forms.Button();
-            this.dashButton = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
             this.timeTimer = new System.Windows.Forms.Timer(this.components);
@@ -157,6 +156,7 @@ namespace Gamey
             this.deleteButton.TabIndex = 17;
             this.deleteButton.Text = "DELETE";
             this.deleteButton.UseVisualStyleBackColor = true;
+            this.deleteButton.Click += new System.EventHandler(this.deleteButton_Click);
             // 
             // searchBox
             // 
@@ -202,7 +202,7 @@ namespace Gamey
             this.studGrid.ReadOnly = true;
             this.studGrid.Size = new System.Drawing.Size(903, 249);
             this.studGrid.TabIndex = 21;
-            this.studGrid.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.studGrid_CellContentClick);
+            this.studGrid.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.studGrid_CellClick);
             // 
             // studyMeLabel
             // 
@@ -237,7 +237,6 @@ namespace Gamey
             this.panel1.Controls.Add(this.courseButton);
             this.panel1.Controls.Add(this.stdPanel);
             this.panel1.Controls.Add(this.stdButton);
-            this.panel1.Controls.Add(this.dashButton);
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
@@ -252,7 +251,7 @@ namespace Gamey
             this.button13.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button13.Font = new System.Drawing.Font("Century Gothic", 14F);
             this.button13.ForeColor = System.Drawing.SystemColors.Control;
-            this.button13.Location = new System.Drawing.Point(0, 776);
+            this.button13.Location = new System.Drawing.Point(0, 729);
             this.button13.Name = "button13";
             this.button13.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.button13.Size = new System.Drawing.Size(193, 47);
@@ -268,7 +267,7 @@ namespace Gamey
             this.scorePanel.Controls.Add(this.scoreManageButton);
             this.scorePanel.Controls.Add(this.scoreAddButton);
             this.scorePanel.Dock = System.Windows.Forms.DockStyle.Top;
-            this.scorePanel.Location = new System.Drawing.Point(0, 636);
+            this.scorePanel.Location = new System.Drawing.Point(0, 589);
             this.scorePanel.Name = "scorePanel";
             this.scorePanel.Size = new System.Drawing.Size(193, 140);
             this.scorePanel.TabIndex = 8;
@@ -328,7 +327,7 @@ namespace Gamey
             this.scoreButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.scoreButton.Font = new System.Drawing.Font("Century Gothic", 14F);
             this.scoreButton.ForeColor = System.Drawing.SystemColors.Control;
-            this.scoreButton.Location = new System.Drawing.Point(0, 589);
+            this.scoreButton.Location = new System.Drawing.Point(0, 542);
             this.scoreButton.Name = "scoreButton";
             this.scoreButton.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.scoreButton.Size = new System.Drawing.Size(193, 47);
@@ -345,7 +344,7 @@ namespace Gamey
             this.coursePanel.Controls.Add(this.courseManageButton);
             this.coursePanel.Controls.Add(this.courseAddButton);
             this.coursePanel.Dock = System.Windows.Forms.DockStyle.Top;
-            this.coursePanel.Location = new System.Drawing.Point(0, 449);
+            this.coursePanel.Location = new System.Drawing.Point(0, 402);
             this.coursePanel.Name = "coursePanel";
             this.coursePanel.Size = new System.Drawing.Size(193, 140);
             this.coursePanel.TabIndex = 6;
@@ -405,7 +404,7 @@ namespace Gamey
             this.courseButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.courseButton.Font = new System.Drawing.Font("Century Gothic", 14F);
             this.courseButton.ForeColor = System.Drawing.SystemColors.Control;
-            this.courseButton.Location = new System.Drawing.Point(0, 402);
+            this.courseButton.Location = new System.Drawing.Point(0, 355);
             this.courseButton.Name = "courseButton";
             this.courseButton.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.courseButton.Size = new System.Drawing.Size(193, 47);
@@ -422,7 +421,7 @@ namespace Gamey
             this.stdPanel.Controls.Add(this.stdManageButton);
             this.stdPanel.Controls.Add(this.stdRegisterButton);
             this.stdPanel.Dock = System.Windows.Forms.DockStyle.Top;
-            this.stdPanel.Location = new System.Drawing.Point(0, 262);
+            this.stdPanel.Location = new System.Drawing.Point(0, 215);
             this.stdPanel.Name = "stdPanel";
             this.stdPanel.Size = new System.Drawing.Size(193, 140);
             this.stdPanel.TabIndex = 4;
@@ -482,7 +481,7 @@ namespace Gamey
             this.stdButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.stdButton.Font = new System.Drawing.Font("Century Gothic", 14F);
             this.stdButton.ForeColor = System.Drawing.SystemColors.Control;
-            this.stdButton.Location = new System.Drawing.Point(0, 215);
+            this.stdButton.Location = new System.Drawing.Point(0, 168);
             this.stdButton.Name = "stdButton";
             this.stdButton.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.stdButton.Size = new System.Drawing.Size(193, 47);
@@ -491,22 +490,6 @@ namespace Gamey
             this.stdButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.stdButton.UseVisualStyleBackColor = true;
             this.stdButton.Click += new System.EventHandler(this.stdButton_Click);
-            // 
-            // dashButton
-            // 
-            this.dashButton.Dock = System.Windows.Forms.DockStyle.Top;
-            this.dashButton.FlatAppearance.BorderSize = 0;
-            this.dashButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.dashButton.Font = new System.Drawing.Font("Century Gothic", 14F);
-            this.dashButton.ForeColor = System.Drawing.SystemColors.Control;
-            this.dashButton.Location = new System.Drawing.Point(0, 168);
-            this.dashButton.Name = "dashButton";
-            this.dashButton.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.dashButton.Size = new System.Drawing.Size(193, 47);
-            this.dashButton.TabIndex = 1;
-            this.dashButton.Text = "Dashboard";
-            this.dashButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.dashButton.UseVisualStyleBackColor = true;
             // 
             // panel2
             // 
@@ -625,7 +608,7 @@ namespace Gamey
             this.addressBox.Size = new System.Drawing.Size(625, 23);
             this.addressBox.TabIndex = 32;
             // 
-            // ProductForm
+            // StudentForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -652,7 +635,7 @@ namespace Gamey
             this.Controls.Add(this.minButton);
             this.Controls.Add(this.exitButton);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "ProductForm";
+            this.Name = "StudentForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ProductForm";
             this.Load += new System.EventHandler(this.ProductForm_Load);
@@ -703,7 +686,6 @@ namespace Gamey
         private System.Windows.Forms.Button stdManageButton;
         private System.Windows.Forms.Button stdRegisterButton;
         private System.Windows.Forms.Button stdButton;
-        private System.Windows.Forms.Button dashButton;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.DateTimePicker dateBox;
