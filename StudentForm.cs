@@ -108,7 +108,7 @@ namespace Gamey
             ShowPanel(scorePanel);
         }
 
-        SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\abdal\source\repos\Gamey\GameStoreDataBase.mdf;Integrated Security=True;Connect Timeout=30");
+        SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\StudyMe\StudyMeDB.mdf;Integrated Security=True;Connect Timeout=30");
         private void addButton_Click(object sender, EventArgs e)
         {
             //Check if male or female
@@ -218,21 +218,35 @@ namespace Gamey
 
         private void editButton_Click(object sender, EventArgs e)
         {
-            /*try
+            //Check if male or female
+            string gender = maleButton.Checked ? "Male" : "Female";
+            try
             {
+                if (String.IsNullOrEmpty(nameBox.Text) || String.IsNullOrEmpty(phoneBox.Text) || String.IsNullOrEmpty(addressBox.Text))
+                {
+                    MessageBox.Show("Missing fields were found. Please make sure all fields are filled");
+                }
+                else
+                {
                     con.Open();
-                    string query = "update stuTable set Name='" + nameBox.Text + "',Gender";
+                    //string query = "UPDATE stuTable SET Gender='" + gender + "',Phone='" + phoneBox.Text + "',Address='" + addressBox.Text + "',DateOfBirth='" + dateBox.Text + "'WHERE Name='" + nameBox.Text + "';";
+                    string query = "update stuTable set Name=@name,Gender=@gender,Phone=@phone,Address=@address,DateOfBirth=@dateofbirth where Name=@name";
                     SqlCommand cmd = new SqlCommand(query, con);
+                    cmd.Parameters.AddWithValue("@name", nameBox.Text);
+                    cmd.Parameters.AddWithValue("@gender", gender);
+                    cmd.Parameters.AddWithValue("@phone", phoneBox.Text);
+                    cmd.Parameters.AddWithValue("@address", addressBox.Text);
+                    cmd.Parameters.AddWithValue("@dateofbirth", dateBox.Text);
                     cmd.ExecuteNonQuery();
-                    MessageBox.Show("Student deleted successfully");
-                    con.Close();
+                    MessageBox.Show("Student updated successfully");
+                    con.Close();                   
                     Pobulate();
-                
+                }
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
-            }*/
+            }
         }
     }
 }
