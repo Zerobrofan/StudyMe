@@ -177,6 +177,7 @@ namespace Gamey
             this.editButton.TabIndex = 20;
             this.editButton.Text = "EDIT";
             this.editButton.UseVisualStyleBackColor = true;
+            this.editButton.Click += new System.EventHandler(this.editButton_Click);
             // 
             // label3
             // 

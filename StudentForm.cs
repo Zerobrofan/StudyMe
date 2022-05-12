@@ -215,5 +215,24 @@ namespace Gamey
                 dateBox.Text = stuRow.Cells[4].Value.ToString();
             }
         }
+
+        private void editButton_Click(object sender, EventArgs e)
+        {
+            /*try
+            {
+                    con.Open();
+                    string query = "update stuTable set Name='" + nameBox.Text + "',Gender";
+                    SqlCommand cmd = new SqlCommand(query, con);
+                    cmd.ExecuteNonQuery();
+                    MessageBox.Show("Student deleted successfully");
+                    con.Close();
+                    Pobulate();
+                
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }*/
+        }
     }
 }
