@@ -44,7 +44,6 @@ namespace Gamey
             this.studyMeLabel = new System.Windows.Forms.Label();
             this.adminPortalLabel = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.button13 = new System.Windows.Forms.Button();
             this.scorePanel = new System.Windows.Forms.Panel();
             this.scoreListButton = new System.Windows.Forms.Button();
             this.scoreManageButton = new System.Windows.Forms.Button();
@@ -58,7 +57,6 @@ namespace Gamey
             this.stdPanel = new System.Windows.Forms.Panel();
             this.stdListButton = new System.Windows.Forms.Button();
             this.stdManageButton = new System.Windows.Forms.Button();
-            this.stdRegisterButton = new System.Windows.Forms.Button();
             this.stdButton = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
@@ -72,6 +70,8 @@ namespace Gamey
             this.phoneBox = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.addressBox = new System.Windows.Forms.TextBox();
+            this.clearButton = new System.Windows.Forms.Button();
+            this.logOutButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.studGrid)).BeginInit();
             this.panel1.SuspendLayout();
             this.scorePanel.SuspendLayout();
@@ -231,7 +231,7 @@ namespace Gamey
             // 
             this.panel1.AutoScroll = true;
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(68)))), ((int)(((byte)(78)))));
-            this.panel1.Controls.Add(this.button13);
+            this.panel1.Controls.Add(this.logOutButton);
             this.panel1.Controls.Add(this.scorePanel);
             this.panel1.Controls.Add(this.scoreButton);
             this.panel1.Controls.Add(this.coursePanel);
@@ -245,22 +245,6 @@ namespace Gamey
             this.panel1.Size = new System.Drawing.Size(210, 580);
             this.panel1.TabIndex = 22;
             // 
-            // button13
-            // 
-            this.button13.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button13.FlatAppearance.BorderSize = 0;
-            this.button13.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button13.Font = new System.Drawing.Font("Century Gothic", 14F);
-            this.button13.ForeColor = System.Drawing.SystemColors.Control;
-            this.button13.Location = new System.Drawing.Point(0, 729);
-            this.button13.Name = "button13";
-            this.button13.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.button13.Size = new System.Drawing.Size(193, 47);
-            this.button13.TabIndex = 9;
-            this.button13.Text = "Exit";
-            this.button13.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button13.UseVisualStyleBackColor = true;
-            // 
             // scorePanel
             // 
             this.scorePanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(197)))), ((int)(((byte)(54)))), ((int)(((byte)(62)))));
@@ -268,7 +252,7 @@ namespace Gamey
             this.scorePanel.Controls.Add(this.scoreManageButton);
             this.scorePanel.Controls.Add(this.scoreAddButton);
             this.scorePanel.Dock = System.Windows.Forms.DockStyle.Top;
-            this.scorePanel.Location = new System.Drawing.Point(0, 589);
+            this.scorePanel.Location = new System.Drawing.Point(0, 553);
             this.scorePanel.Name = "scorePanel";
             this.scorePanel.Size = new System.Drawing.Size(193, 140);
             this.scorePanel.TabIndex = 8;
@@ -328,7 +312,7 @@ namespace Gamey
             this.scoreButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.scoreButton.Font = new System.Drawing.Font("Century Gothic", 14F);
             this.scoreButton.ForeColor = System.Drawing.SystemColors.Control;
-            this.scoreButton.Location = new System.Drawing.Point(0, 542);
+            this.scoreButton.Location = new System.Drawing.Point(0, 506);
             this.scoreButton.Name = "scoreButton";
             this.scoreButton.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.scoreButton.Size = new System.Drawing.Size(193, 47);
@@ -345,7 +329,7 @@ namespace Gamey
             this.coursePanel.Controls.Add(this.courseManageButton);
             this.coursePanel.Controls.Add(this.courseAddButton);
             this.coursePanel.Dock = System.Windows.Forms.DockStyle.Top;
-            this.coursePanel.Location = new System.Drawing.Point(0, 402);
+            this.coursePanel.Location = new System.Drawing.Point(0, 366);
             this.coursePanel.Name = "coursePanel";
             this.coursePanel.Size = new System.Drawing.Size(193, 140);
             this.coursePanel.TabIndex = 6;
@@ -405,7 +389,7 @@ namespace Gamey
             this.courseButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.courseButton.Font = new System.Drawing.Font("Century Gothic", 14F);
             this.courseButton.ForeColor = System.Drawing.SystemColors.Control;
-            this.courseButton.Location = new System.Drawing.Point(0, 355);
+            this.courseButton.Location = new System.Drawing.Point(0, 319);
             this.courseButton.Name = "courseButton";
             this.courseButton.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.courseButton.Size = new System.Drawing.Size(193, 47);
@@ -420,11 +404,10 @@ namespace Gamey
             this.stdPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(197)))), ((int)(((byte)(54)))), ((int)(((byte)(62)))));
             this.stdPanel.Controls.Add(this.stdListButton);
             this.stdPanel.Controls.Add(this.stdManageButton);
-            this.stdPanel.Controls.Add(this.stdRegisterButton);
             this.stdPanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.stdPanel.Location = new System.Drawing.Point(0, 215);
             this.stdPanel.Name = "stdPanel";
-            this.stdPanel.Size = new System.Drawing.Size(193, 140);
+            this.stdPanel.Size = new System.Drawing.Size(193, 104);
             this.stdPanel.TabIndex = 4;
             // 
             // stdListButton
@@ -434,7 +417,7 @@ namespace Gamey
             this.stdListButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.stdListButton.Font = new System.Drawing.Font("Century Gothic", 12F);
             this.stdListButton.ForeColor = System.Drawing.SystemColors.Control;
-            this.stdListButton.Location = new System.Drawing.Point(0, 94);
+            this.stdListButton.Location = new System.Drawing.Point(0, 47);
             this.stdListButton.Name = "stdListButton";
             this.stdListButton.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
             this.stdListButton.Size = new System.Drawing.Size(193, 47);
@@ -450,7 +433,7 @@ namespace Gamey
             this.stdManageButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.stdManageButton.Font = new System.Drawing.Font("Century Gothic", 12F);
             this.stdManageButton.ForeColor = System.Drawing.SystemColors.Control;
-            this.stdManageButton.Location = new System.Drawing.Point(0, 47);
+            this.stdManageButton.Location = new System.Drawing.Point(0, 0);
             this.stdManageButton.Name = "stdManageButton";
             this.stdManageButton.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
             this.stdManageButton.Size = new System.Drawing.Size(193, 47);
@@ -458,22 +441,6 @@ namespace Gamey
             this.stdManageButton.Text = "Manage Students";
             this.stdManageButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.stdManageButton.UseVisualStyleBackColor = true;
-            // 
-            // stdRegisterButton
-            // 
-            this.stdRegisterButton.Dock = System.Windows.Forms.DockStyle.Top;
-            this.stdRegisterButton.FlatAppearance.BorderSize = 0;
-            this.stdRegisterButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.stdRegisterButton.Font = new System.Drawing.Font("Century Gothic", 12F);
-            this.stdRegisterButton.ForeColor = System.Drawing.SystemColors.Control;
-            this.stdRegisterButton.Location = new System.Drawing.Point(0, 0);
-            this.stdRegisterButton.Name = "stdRegisterButton";
-            this.stdRegisterButton.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
-            this.stdRegisterButton.Size = new System.Drawing.Size(193, 47);
-            this.stdRegisterButton.TabIndex = 0;
-            this.stdRegisterButton.Text = "Register Student";
-            this.stdRegisterButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.stdRegisterButton.UseVisualStyleBackColor = true;
             // 
             // stdButton
             // 
@@ -609,11 +576,41 @@ namespace Gamey
             this.addressBox.Size = new System.Drawing.Size(625, 23);
             this.addressBox.TabIndex = 32;
             // 
+            // clearButton
+            // 
+            this.clearButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.clearButton.Font = new System.Drawing.Font("Century Gothic", 12F);
+            this.clearButton.Location = new System.Drawing.Point(642, 504);
+            this.clearButton.Name = "clearButton";
+            this.clearButton.Size = new System.Drawing.Size(117, 39);
+            this.clearButton.TabIndex = 33;
+            this.clearButton.Text = "CLEAR";
+            this.clearButton.UseVisualStyleBackColor = true;
+            this.clearButton.Click += new System.EventHandler(this.clearButton_Click);
+            // 
+            // logOutButton
+            // 
+            this.logOutButton.Dock = System.Windows.Forms.DockStyle.Top;
+            this.logOutButton.FlatAppearance.BorderSize = 0;
+            this.logOutButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.logOutButton.Font = new System.Drawing.Font("Century Gothic", 14F);
+            this.logOutButton.ForeColor = System.Drawing.SystemColors.Control;
+            this.logOutButton.Location = new System.Drawing.Point(0, 693);
+            this.logOutButton.Name = "logOutButton";
+            this.logOutButton.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.logOutButton.Size = new System.Drawing.Size(193, 47);
+            this.logOutButton.TabIndex = 9;
+            this.logOutButton.Text = "Log Out";
+            this.logOutButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.logOutButton.UseVisualStyleBackColor = true;
+            this.logOutButton.Click += new System.EventHandler(this.logOutButton_Click);
+            // 
             // StudentForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1150, 580);
+            this.Controls.Add(this.clearButton);
             this.Controls.Add(this.addressBox);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.phoneBox);
@@ -671,7 +668,6 @@ namespace Gamey
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Timer timeTimer;
-        private System.Windows.Forms.Button button13;
         private System.Windows.Forms.Panel scorePanel;
         private System.Windows.Forms.Button scoreListButton;
         private System.Windows.Forms.Button scoreManageButton;
@@ -685,7 +681,6 @@ namespace Gamey
         private System.Windows.Forms.Panel stdPanel;
         private System.Windows.Forms.Button stdListButton;
         private System.Windows.Forms.Button stdManageButton;
-        private System.Windows.Forms.Button stdRegisterButton;
         private System.Windows.Forms.Button stdButton;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label5;
@@ -696,5 +691,7 @@ namespace Gamey
         private System.Windows.Forms.TextBox phoneBox;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox addressBox;
+        private System.Windows.Forms.Button clearButton;
+        private System.Windows.Forms.Button logOutButton;
     }
 }

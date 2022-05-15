@@ -8,6 +8,7 @@ using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace Gamey
 {
@@ -34,7 +35,7 @@ namespace Gamey
             Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 25, 25));
         }
 
-        private void Form1_MouseDown(object sender, MouseEventArgs e)
+        private void LoginForm_MouseDown(object sender, MouseEventArgs e)
         {
             ReleaseCapture();
             SendMessage(this.Handle, 0x112, 0xf012, 0);
@@ -48,6 +49,35 @@ namespace Gamey
         private void minButton_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
+        }
+
+        SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\StudyMe\StudyMeDB.mdf;Integrated Security=True;Connect Timeout=30");
+        private void loginButton_Click(object sender, EventArgs e)
+        {
+            con.Open();
+            string query = "Select * from adminTable where AdminName='"+usernameBox.Text+"'and AdminPass='"+passBox.Text+"'";
+            SqlDataAdapter sda = new SqlDataAdapter(query, con);
+            DataTable dt = new DataTable();
+            sda.Fill(dt);
+            if(dt.Rows.Count == 1)
+            {
+                StudentForm stuForm = new StudentForm();
+                this.Hide();
+                stuForm.Show();                
+            }
+            else if (usernameBox.Text == "Rick Astely" && passBox.Text =="nevergonnagiveyouup")
+            {
+                System.Diagnostics.Process.Start("https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstley");
+                usernameBox.Clear();
+                passBox.Clear();
+            }
+            else
+            {
+                MessageBox.Show("Wrong username or password.");
+                usernameBox.Clear();
+                passBox.Clear();
+            }
+            con.Close();
         }
     }
 }

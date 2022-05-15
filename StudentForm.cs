@@ -248,5 +248,22 @@ namespace Gamey
                 MessageBox.Show(ex.Message);
             }
         }
+
+        private void clearButton_Click(object sender, EventArgs e)
+        {
+            nameBox.Text = "";
+            maleButton.Checked = false;
+            femaleButton.Checked = false;
+            dateBox.Text = "";
+            phoneBox.Text = "";
+            addressBox.Text = "";
+        }
+
+        private void logOutButton_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            LoginForm loginForm = new LoginForm();
+            loginForm.Show();
+        }
     }
 }
