@@ -61,21 +61,17 @@ namespace Gamey
             sda.Fill(dt);
             if(dt.Rows.Count == 1)
             {
-                StudentForm stuForm = new StudentForm();
+                DashboardForm dashForm = new DashboardForm();
                 this.Hide();
-                stuForm.Show();                
+                dashForm.Show();                
             }
             else if (usernameBox.Text == "Rick Astely" && passBox.Text =="nevergonnagiveyouup")
             {
                 System.Diagnostics.Process.Start("https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstley");
-                usernameBox.Clear();
-                passBox.Clear();
             }
             else
             {
                 MessageBox.Show("Wrong username or password.");
-                usernameBox.Clear();
-                passBox.Clear();
             }
             con.Close();
         }

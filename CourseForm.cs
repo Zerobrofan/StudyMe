@@ -10,11 +10,18 @@ using System.Windows.Forms;
 
 namespace Gamey
 {
-    public partial class SlpashScreen : Form
+    public partial class CourseForm : Form
     {
-        public SlpashScreen()
+        public CourseForm()
         {
             InitializeComponent();
+        }
+
+        private void clearButton_Click(object sender, EventArgs e)
+        {
+            courseNameBox.Text = "";
+            creditHourBox.Text = "";
+            courseDescBox.Text = "";
         }
     }
 }
