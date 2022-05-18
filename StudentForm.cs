@@ -59,7 +59,7 @@ namespace Gamey
                 }
                 else
                 {
-                    string query = "insert into stuTable values ('" + nameBox.Text + "','" + gender + "','" + phoneBox.Text + "','" + addressBox.Text + "','" + dateBox.Text + "')";
+                    string query = "insert into stuTable values ('" + nameBox.Text + "','" + gender + "','" + phoneBox.Text + "','" + addressBox.Text + "','" + dateBox.Text + "','" + courseBox.Text + "')";
                     SqlCommand cmd = new SqlCommand(query, con);
                     cmd.ExecuteNonQuery();
                     MessageBox.Show("Student added successfully");
@@ -91,6 +91,20 @@ namespace Gamey
         private void ActualStudentForm_Load(object sender, EventArgs e)
         {
             Pobulate();
+
+            con.Open();
+            string query = "select * from courseTable";
+            SqlCommand cmd = new SqlCommand(query, con);
+            SqlDataAdapter sda = new SqlDataAdapter(cmd);
+            DataSet ds = new DataSet();
+            BindingSource bs = new BindingSource();
+            sda.Fill(ds);
+            cmd.ExecuteNonQuery();
+            con.Close();
+
+            courseBox.DataSource = ds.Tables[0];
+            courseBox.DisplayMember = "CourseName";
+
         }
 
         private void editButton_Click(object sender, EventArgs e)
@@ -107,13 +121,14 @@ namespace Gamey
                 {
                     con.Open();
                     //string query = "UPDATE stuTable SET Gender='" + gender + "',Phone='" + phoneBox.Text + "',Address='" + addressBox.Text + "',DateOfBirth='" + dateBox.Text + "'WHERE Name='" + nameBox.Text + "';";
-                    string query = "update stuTable set Name=@name,Gender=@gender,Phone=@phone,Address=@address,DateOfBirth=@dateofbirth where Name=@name";
+                    string query = "update stuTable set Name=@name,Gender=@gender,Phone=@phone,Address=@address,DateOfBirth=@dateofbirth,Course=@course where Name=@name";
                     SqlCommand cmd = new SqlCommand(query, con);
                     cmd.Parameters.AddWithValue("@name", nameBox.Text);
                     cmd.Parameters.AddWithValue("@gender", gender);
                     cmd.Parameters.AddWithValue("@phone", phoneBox.Text);
                     cmd.Parameters.AddWithValue("@address", addressBox.Text);
                     cmd.Parameters.AddWithValue("@dateofbirth", dateBox.Text);
+                    cmd.Parameters.AddWithValue("@course", courseBox.Text);
                     cmd.ExecuteNonQuery();
                     MessageBox.Show("Student updated successfully");
                     con.Close();
@@ -166,6 +181,7 @@ namespace Gamey
                 phoneBox.Text = stuRow.Cells[2].Value.ToString();
                 addressBox.Text = stuRow.Cells[3].Value.ToString();
                 dateBox.Text = stuRow.Cells[4].Value.ToString();
+                courseBox.Text = stuRow.Cells[5].Value.ToString();
             }
         }
     }

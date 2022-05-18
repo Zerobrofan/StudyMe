@@ -77,6 +77,7 @@ namespace Gamey
             this.courseGrid.ReadOnly = true;
             this.courseGrid.Size = new System.Drawing.Size(916, 249);
             this.courseGrid.TabIndex = 22;
+            this.courseGrid.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.courseGrid_CellClick);
             // 
             // label3
             // 
@@ -95,6 +96,7 @@ namespace Gamey
             this.courseSearchBox.Name = "courseSearchBox";
             this.courseSearchBox.Size = new System.Drawing.Size(437, 22);
             this.courseSearchBox.TabIndex = 24;
+            this.courseSearchBox.TextChanged += new System.EventHandler(this.courseSearchBox_TextChanged);
             // 
             // creditHourBox
             // 
@@ -154,6 +156,7 @@ namespace Gamey
             this.editButton.TabIndex = 36;
             this.editButton.Text = "EDIT";
             this.editButton.UseVisualStyleBackColor = true;
+            this.editButton.Click += new System.EventHandler(this.editButton_Click);
             // 
             // deleteButton
             // 
@@ -165,6 +168,7 @@ namespace Gamey
             this.deleteButton.TabIndex = 35;
             this.deleteButton.Text = "DELETE";
             this.deleteButton.UseVisualStyleBackColor = true;
+            this.deleteButton.Click += new System.EventHandler(this.deleteButton_Click);
             // 
             // addButton
             // 
@@ -176,6 +180,7 @@ namespace Gamey
             this.addButton.TabIndex = 34;
             this.addButton.Text = "ADD";
             this.addButton.UseVisualStyleBackColor = true;
+            this.addButton.Click += new System.EventHandler(this.addButton_Click);
             // 
             // CourseForm
             // 
@@ -202,6 +207,7 @@ namespace Gamey
             this.ShowIcon = false;
             this.ShowInTaskbar = false;
             this.Text = "CourseForm";
+            this.Load += new System.EventHandler(this.CourseForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.courseGrid)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

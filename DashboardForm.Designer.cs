@@ -37,11 +37,6 @@ namespace Gamey
             this.adminPortalLabel = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.logOutButton = new System.Windows.Forms.Button();
-            this.scorePanel = new System.Windows.Forms.Panel();
-            this.scoreListButton = new System.Windows.Forms.Button();
-            this.scoreManageButton = new System.Windows.Forms.Button();
-            this.scoreAddButton = new System.Windows.Forms.Button();
-            this.scoreButton = new System.Windows.Forms.Button();
             this.coursePanel = new System.Windows.Forms.Panel();
             this.courseListButton = new System.Windows.Forms.Button();
             this.courseManageButton = new System.Windows.Forms.Button();
@@ -56,7 +51,6 @@ namespace Gamey
             this.welcomeLabel = new System.Windows.Forms.Label();
             this.pleaseLabel = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
-            this.scorePanel.SuspendLayout();
             this.coursePanel.SuspendLayout();
             this.stdPanel.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -125,8 +119,6 @@ namespace Gamey
             this.panel1.AutoScroll = true;
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(68)))), ((int)(((byte)(78)))));
             this.panel1.Controls.Add(this.logOutButton);
-            this.panel1.Controls.Add(this.scorePanel);
-            this.panel1.Controls.Add(this.scoreButton);
             this.panel1.Controls.Add(this.coursePanel);
             this.panel1.Controls.Add(this.courseButton);
             this.panel1.Controls.Add(this.stdPanel);
@@ -145,95 +137,15 @@ namespace Gamey
             this.logOutButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.logOutButton.Font = new System.Drawing.Font("Century Gothic", 14F);
             this.logOutButton.ForeColor = System.Drawing.SystemColors.Control;
-            this.logOutButton.Location = new System.Drawing.Point(0, 636);
+            this.logOutButton.Location = new System.Drawing.Point(0, 449);
             this.logOutButton.Name = "logOutButton";
             this.logOutButton.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.logOutButton.Size = new System.Drawing.Size(193, 47);
+            this.logOutButton.Size = new System.Drawing.Size(210, 47);
             this.logOutButton.TabIndex = 9;
             this.logOutButton.Text = "Log Out";
             this.logOutButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.logOutButton.UseVisualStyleBackColor = true;
             this.logOutButton.Click += new System.EventHandler(this.logOutButton_Click);
-            // 
-            // scorePanel
-            // 
-            this.scorePanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(197)))), ((int)(((byte)(54)))), ((int)(((byte)(62)))));
-            this.scorePanel.Controls.Add(this.scoreListButton);
-            this.scorePanel.Controls.Add(this.scoreManageButton);
-            this.scorePanel.Controls.Add(this.scoreAddButton);
-            this.scorePanel.Dock = System.Windows.Forms.DockStyle.Top;
-            this.scorePanel.Location = new System.Drawing.Point(0, 496);
-            this.scorePanel.Name = "scorePanel";
-            this.scorePanel.Size = new System.Drawing.Size(193, 140);
-            this.scorePanel.TabIndex = 8;
-            // 
-            // scoreListButton
-            // 
-            this.scoreListButton.Dock = System.Windows.Forms.DockStyle.Top;
-            this.scoreListButton.FlatAppearance.BorderSize = 0;
-            this.scoreListButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(137)))), ((int)(((byte)(38)))), ((int)(((byte)(43)))));
-            this.scoreListButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.scoreListButton.Font = new System.Drawing.Font("Century Gothic", 12F);
-            this.scoreListButton.ForeColor = System.Drawing.SystemColors.Control;
-            this.scoreListButton.Location = new System.Drawing.Point(0, 94);
-            this.scoreListButton.Name = "scoreListButton";
-            this.scoreListButton.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
-            this.scoreListButton.Size = new System.Drawing.Size(193, 47);
-            this.scoreListButton.TabIndex = 2;
-            this.scoreListButton.Text = "All Scores";
-            this.scoreListButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.scoreListButton.UseVisualStyleBackColor = true;
-            // 
-            // scoreManageButton
-            // 
-            this.scoreManageButton.Dock = System.Windows.Forms.DockStyle.Top;
-            this.scoreManageButton.FlatAppearance.BorderSize = 0;
-            this.scoreManageButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(137)))), ((int)(((byte)(38)))), ((int)(((byte)(43)))));
-            this.scoreManageButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.scoreManageButton.Font = new System.Drawing.Font("Century Gothic", 12F);
-            this.scoreManageButton.ForeColor = System.Drawing.SystemColors.Control;
-            this.scoreManageButton.Location = new System.Drawing.Point(0, 47);
-            this.scoreManageButton.Name = "scoreManageButton";
-            this.scoreManageButton.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
-            this.scoreManageButton.Size = new System.Drawing.Size(193, 47);
-            this.scoreManageButton.TabIndex = 1;
-            this.scoreManageButton.Text = "Manage Scores";
-            this.scoreManageButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.scoreManageButton.UseVisualStyleBackColor = true;
-            // 
-            // scoreAddButton
-            // 
-            this.scoreAddButton.Dock = System.Windows.Forms.DockStyle.Top;
-            this.scoreAddButton.FlatAppearance.BorderSize = 0;
-            this.scoreAddButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(137)))), ((int)(((byte)(38)))), ((int)(((byte)(43)))));
-            this.scoreAddButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.scoreAddButton.Font = new System.Drawing.Font("Century Gothic", 12F);
-            this.scoreAddButton.ForeColor = System.Drawing.SystemColors.Control;
-            this.scoreAddButton.Location = new System.Drawing.Point(0, 0);
-            this.scoreAddButton.Name = "scoreAddButton";
-            this.scoreAddButton.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
-            this.scoreAddButton.Size = new System.Drawing.Size(193, 47);
-            this.scoreAddButton.TabIndex = 0;
-            this.scoreAddButton.Text = "Add Score";
-            this.scoreAddButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.scoreAddButton.UseVisualStyleBackColor = true;
-            // 
-            // scoreButton
-            // 
-            this.scoreButton.Dock = System.Windows.Forms.DockStyle.Top;
-            this.scoreButton.FlatAppearance.BorderSize = 0;
-            this.scoreButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.scoreButton.Font = new System.Drawing.Font("Century Gothic", 14F);
-            this.scoreButton.ForeColor = System.Drawing.SystemColors.Control;
-            this.scoreButton.Location = new System.Drawing.Point(0, 449);
-            this.scoreButton.Name = "scoreButton";
-            this.scoreButton.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.scoreButton.Size = new System.Drawing.Size(193, 47);
-            this.scoreButton.TabIndex = 7;
-            this.scoreButton.Text = "Scores";
-            this.scoreButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.scoreButton.UseVisualStyleBackColor = true;
-            this.scoreButton.Click += new System.EventHandler(this.scoreButton_Click);
             // 
             // coursePanel
             // 
@@ -243,7 +155,7 @@ namespace Gamey
             this.coursePanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.coursePanel.Location = new System.Drawing.Point(0, 356);
             this.coursePanel.Name = "coursePanel";
-            this.coursePanel.Size = new System.Drawing.Size(193, 93);
+            this.coursePanel.Size = new System.Drawing.Size(210, 93);
             this.coursePanel.TabIndex = 6;
             // 
             // courseListButton
@@ -257,11 +169,12 @@ namespace Gamey
             this.courseListButton.Location = new System.Drawing.Point(0, 47);
             this.courseListButton.Name = "courseListButton";
             this.courseListButton.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
-            this.courseListButton.Size = new System.Drawing.Size(193, 47);
+            this.courseListButton.Size = new System.Drawing.Size(210, 47);
             this.courseListButton.TabIndex = 2;
             this.courseListButton.Text = "Course List";
             this.courseListButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.courseListButton.UseVisualStyleBackColor = true;
+            this.courseListButton.Click += new System.EventHandler(this.courseListButton_Click);
             // 
             // courseManageButton
             // 
@@ -274,7 +187,7 @@ namespace Gamey
             this.courseManageButton.Location = new System.Drawing.Point(0, 0);
             this.courseManageButton.Name = "courseManageButton";
             this.courseManageButton.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
-            this.courseManageButton.Size = new System.Drawing.Size(193, 47);
+            this.courseManageButton.Size = new System.Drawing.Size(210, 47);
             this.courseManageButton.TabIndex = 1;
             this.courseManageButton.Text = "Manage Courses";
             this.courseManageButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -291,7 +204,7 @@ namespace Gamey
             this.courseButton.Location = new System.Drawing.Point(0, 309);
             this.courseButton.Name = "courseButton";
             this.courseButton.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.courseButton.Size = new System.Drawing.Size(193, 47);
+            this.courseButton.Size = new System.Drawing.Size(210, 47);
             this.courseButton.TabIndex = 5;
             this.courseButton.Text = "Course";
             this.courseButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -306,7 +219,7 @@ namespace Gamey
             this.stdPanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.stdPanel.Location = new System.Drawing.Point(0, 217);
             this.stdPanel.Name = "stdPanel";
-            this.stdPanel.Size = new System.Drawing.Size(193, 92);
+            this.stdPanel.Size = new System.Drawing.Size(210, 92);
             this.stdPanel.TabIndex = 4;
             // 
             // stdListButton
@@ -320,11 +233,12 @@ namespace Gamey
             this.stdListButton.Location = new System.Drawing.Point(0, 47);
             this.stdListButton.Name = "stdListButton";
             this.stdListButton.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
-            this.stdListButton.Size = new System.Drawing.Size(193, 47);
+            this.stdListButton.Size = new System.Drawing.Size(210, 47);
             this.stdListButton.TabIndex = 2;
             this.stdListButton.Text = "Student List";
             this.stdListButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.stdListButton.UseVisualStyleBackColor = true;
+            this.stdListButton.Click += new System.EventHandler(this.stdListButton_Click);
             // 
             // stdManageButton
             // 
@@ -337,7 +251,7 @@ namespace Gamey
             this.stdManageButton.Location = new System.Drawing.Point(0, 0);
             this.stdManageButton.Name = "stdManageButton";
             this.stdManageButton.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
-            this.stdManageButton.Size = new System.Drawing.Size(193, 47);
+            this.stdManageButton.Size = new System.Drawing.Size(210, 47);
             this.stdManageButton.TabIndex = 1;
             this.stdManageButton.Text = "Manage Students";
             this.stdManageButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -354,7 +268,7 @@ namespace Gamey
             this.stdButton.Location = new System.Drawing.Point(0, 170);
             this.stdButton.Name = "stdButton";
             this.stdButton.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.stdButton.Size = new System.Drawing.Size(193, 47);
+            this.stdButton.Size = new System.Drawing.Size(210, 47);
             this.stdButton.TabIndex = 3;
             this.stdButton.Text = "Student";
             this.stdButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -369,8 +283,9 @@ namespace Gamey
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(193, 170);
+            this.panel2.Size = new System.Drawing.Size(210, 170);
             this.panel2.TabIndex = 0;
+            this.panel2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel2_MouseDown);
             // 
             // label4
             // 
@@ -423,10 +338,9 @@ namespace Gamey
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "DashboardForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "ProductForm";
+            this.Text = " ";
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.ProductForm_MouseDown);
             this.panel1.ResumeLayout(false);
-            this.scorePanel.ResumeLayout(false);
             this.coursePanel.ResumeLayout(false);
             this.stdPanel.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
@@ -446,11 +360,6 @@ namespace Gamey
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Timer timeTimer;
-        private System.Windows.Forms.Panel scorePanel;
-        private System.Windows.Forms.Button scoreListButton;
-        private System.Windows.Forms.Button scoreManageButton;
-        private System.Windows.Forms.Button scoreAddButton;
-        private System.Windows.Forms.Button scoreButton;
         private System.Windows.Forms.Panel coursePanel;
         private System.Windows.Forms.Button courseListButton;
         private System.Windows.Forms.Button courseManageButton;
@@ -458,9 +367,9 @@ namespace Gamey
         private System.Windows.Forms.Panel stdPanel;
         private System.Windows.Forms.Button stdListButton;
         private System.Windows.Forms.Button stdManageButton;
-        private System.Windows.Forms.Button stdButton;
         private System.Windows.Forms.Button logOutButton;
         private System.Windows.Forms.Label welcomeLabel;
         private System.Windows.Forms.Label pleaseLabel;
+        private System.Windows.Forms.Button stdButton;
     }
 }

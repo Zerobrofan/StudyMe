@@ -36,7 +36,6 @@ namespace Gamey
 
             stdPanel.Visible = false;
             coursePanel.Visible = false;
-            scorePanel.Visible = false;
 
         }
         
@@ -51,10 +50,6 @@ namespace Gamey
             if (coursePanel.Visible == true)
             {
                 coursePanel.Visible = false;
-            }
-            if (scorePanel.Visible == true)
-            {
-                scorePanel.Visible = false;
             }
         }
         private void ShowPanel(Panel submenu)
@@ -102,12 +97,6 @@ namespace Gamey
             ShowPanel(coursePanel);
         }
 
-        private void scoreButton_Click(object sender, EventArgs e)
-        {
-            HidePanel();
-            ShowPanel(scorePanel);
-        }
-
         private void logOutButton_Click(object sender, EventArgs e)
         {
             this.Hide();
@@ -145,6 +134,44 @@ namespace Gamey
             studentForm.FormBorderStyle = FormBorderStyle.None;
             studentForm.Dock = DockStyle.Fill;
             studentForm.Show();
+        }
+
+        private void stdListButton_Click(object sender, EventArgs e)
+        {
+            welcomeLabel.Text = "";
+            pleaseLabel.Text = "";
+
+            if (ActiveMdiChild != null)
+                ActiveMdiChild.Close();
+
+            this.IsMdiContainer = true;
+            StudentList studentList = new StudentList();
+            studentList.MdiParent = this;
+            studentList.FormBorderStyle = FormBorderStyle.None;
+            studentList.Dock = DockStyle.Fill;
+            studentList.Show();
+        }
+
+        private void courseListButton_Click(object sender, EventArgs e)
+        {
+            welcomeLabel.Text = "";
+            pleaseLabel.Text = "";
+
+            if (ActiveMdiChild != null)
+                ActiveMdiChild.Close();
+
+            this.IsMdiContainer = true;
+            CourseList courseList = new CourseList();
+            courseList.MdiParent = this;
+            courseList.FormBorderStyle = FormBorderStyle.None;
+            courseList.Dock = DockStyle.Fill;
+            courseList.Show();
+        }
+
+        private void panel2_MouseDown(object sender, MouseEventArgs e)
+        {
+            ReleaseCapture();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
     }
 }

@@ -47,6 +47,8 @@ namespace Gamey
             this.addButton = new System.Windows.Forms.Button();
             this.nameBox = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.courseBox = new System.Windows.Forms.ComboBox();
+            this.label4 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.studGrid)).BeginInit();
             this.SuspendLayout();
             // 
@@ -67,7 +69,7 @@ namespace Gamey
             this.addressBox.Font = new System.Drawing.Font("Arial", 10F);
             this.addressBox.Location = new System.Drawing.Point(114, 482);
             this.addressBox.Name = "addressBox";
-            this.addressBox.Size = new System.Drawing.Size(625, 23);
+            this.addressBox.Size = new System.Drawing.Size(370, 23);
             this.addressBox.TabIndex = 53;
             // 
             // label7
@@ -242,11 +244,33 @@ namespace Gamey
             this.label2.TabIndex = 37;
             this.label2.Text = "Name:";
             // 
-            // ActualStudentForm
+            // courseBox
+            // 
+            this.courseBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.courseBox.Font = new System.Drawing.Font("Arial", 10F);
+            this.courseBox.FormattingEnabled = true;
+            this.courseBox.Location = new System.Drawing.Point(586, 482);
+            this.courseBox.Name = "courseBox";
+            this.courseBox.Size = new System.Drawing.Size(329, 24);
+            this.courseBox.TabIndex = 55;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Century Gothic", 13F, System.Drawing.FontStyle.Bold);
+            this.label4.Location = new System.Drawing.Point(502, 482);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(78, 22);
+            this.label4.TabIndex = 56;
+            this.label4.Text = "Course:";
+            // 
+            // StudentForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(940, 600);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.courseBox);
             this.Controls.Add(this.clearButton);
             this.Controls.Add(this.addressBox);
             this.Controls.Add(this.label7);
@@ -267,7 +291,7 @@ namespace Gamey
             this.Controls.Add(this.label2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MaximizeBox = false;
-            this.Name = "ActualStudentForm";
+            this.Name = "StudentForm";
             this.ShowIcon = false;
             this.ShowInTaskbar = false;
             this.Text = "ActualStudentForm";
@@ -298,5 +322,7 @@ namespace Gamey
         private System.Windows.Forms.Button addButton;
         private System.Windows.Forms.TextBox nameBox;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.ComboBox courseBox;
+        private System.Windows.Forms.Label label4;
     }
 }
