@@ -1,11 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
 
@@ -15,7 +9,7 @@ namespace Gamey
     {
         public StudentForm()
         {
-            InitializeComponent();
+            InitializeComponent();           
         }
         SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\StudyMe\StudyMeDB.mdf;Integrated Security=True;Connect Timeout=30");
 
@@ -72,6 +66,12 @@ namespace Gamey
                 MessageBox.Show(ex.Message);
             }
             Pobulate();
+
+            nameBox.Text = "";
+            femaleButton.Checked = false;
+            dateBox.Text = "";
+            phoneBox.Text = "";
+            addressBox.Text = "";
         }
 
         private void Pobulate()
@@ -104,6 +104,7 @@ namespace Gamey
 
             courseBox.DataSource = ds.Tables[0];
             courseBox.DisplayMember = "CourseName";
+            maleButton.Checked = true;
 
         }
 
@@ -119,8 +120,7 @@ namespace Gamey
                 }
                 else
                 {
-                    con.Open();
-                    //string query = "UPDATE stuTable SET Gender='" + gender + "',Phone='" + phoneBox.Text + "',Address='" + addressBox.Text + "',DateOfBirth='" + dateBox.Text + "'WHERE Name='" + nameBox.Text + "';";
+                    con.Open();                   
                     string query = "update stuTable set Name=@name,Gender=@gender,Phone=@phone,Address=@address,DateOfBirth=@dateofbirth,Course=@course where Name=@name";
                     SqlCommand cmd = new SqlCommand(query, con);
                     cmd.Parameters.AddWithValue("@name", nameBox.Text);

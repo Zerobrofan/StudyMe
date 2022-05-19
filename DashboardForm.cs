@@ -1,12 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
 using System.Runtime.InteropServices;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Gamey
@@ -28,6 +22,17 @@ namespace Gamey
             int nWidthEllipse,
             int nHeightEllipse
             );
+        public DashboardForm(string username)
+        {
+            InitializeComponent();
+            Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 25, 25));
+            timeTimer.Start();
+
+            userNameLabel.Text = username;
+            stdPanel.Visible = false;
+            coursePanel.Visible = false;
+        }
+
         public DashboardForm()
         {
             InitializeComponent();
@@ -36,24 +41,13 @@ namespace Gamey
 
             stdPanel.Visible = false;
             coursePanel.Visible = false;
-
         }
-        
 
-
-        private void HidePanel()
-        {
-            if (stdPanel.Visible == true)
-            {
-                stdPanel.Visible = false;
-            }
-            if (coursePanel.Visible == true)
-            {
-                coursePanel.Visible = false;
-            }
-        }
         private void ShowPanel(Panel submenu)
-        {
+        {           
+            stdPanel.Visible = false;                    
+            coursePanel.Visible = false;
+
             if (submenu.Visible == false)
             {
                 submenu.Visible = true;
@@ -87,14 +81,26 @@ namespace Gamey
 
         private void stdButton_Click(object sender, EventArgs e)
         {
-            HidePanel();
-            ShowPanel(stdPanel);
+            if(stdPanel.Visible == true)
+            {
+                stdPanel.Visible = false;
+            }
+            else 
+            {
+                ShowPanel(stdPanel); 
+            }          
         }
 
         private void courseButton_Click(object sender, EventArgs e)
         {
-            HidePanel();
-            ShowPanel(coursePanel);
+            if (coursePanel.Visible == true)
+            {
+                coursePanel.Visible = false;
+            }
+            else
+            {
+                ShowPanel(coursePanel);
+            }            
         }
 
         private void logOutButton_Click(object sender, EventArgs e)

@@ -46,7 +46,7 @@ namespace Gamey
             this.stdManageButton = new System.Windows.Forms.Button();
             this.stdButton = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.label4 = new System.Windows.Forms.Label();
+            this.userNameLabel = new System.Windows.Forms.Label();
             this.timeTimer = new System.Windows.Forms.Timer(this.components);
             this.welcomeLabel = new System.Windows.Forms.Label();
             this.pleaseLabel = new System.Windows.Forms.Label();
@@ -132,12 +132,12 @@ namespace Gamey
             // 
             // logOutButton
             // 
-            this.logOutButton.Dock = System.Windows.Forms.DockStyle.Top;
+            this.logOutButton.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.logOutButton.FlatAppearance.BorderSize = 0;
             this.logOutButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.logOutButton.Font = new System.Drawing.Font("Century Gothic", 14F);
             this.logOutButton.ForeColor = System.Drawing.SystemColors.Control;
-            this.logOutButton.Location = new System.Drawing.Point(0, 449);
+            this.logOutButton.Location = new System.Drawing.Point(0, 553);
             this.logOutButton.Name = "logOutButton";
             this.logOutButton.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.logOutButton.Size = new System.Drawing.Size(210, 47);
@@ -224,13 +224,13 @@ namespace Gamey
             // 
             // stdListButton
             // 
-            this.stdListButton.Dock = System.Windows.Forms.DockStyle.Top;
+            this.stdListButton.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.stdListButton.FlatAppearance.BorderSize = 0;
             this.stdListButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(137)))), ((int)(((byte)(38)))), ((int)(((byte)(43)))));
             this.stdListButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.stdListButton.Font = new System.Drawing.Font("Century Gothic", 12F);
             this.stdListButton.ForeColor = System.Drawing.SystemColors.Control;
-            this.stdListButton.Location = new System.Drawing.Point(0, 47);
+            this.stdListButton.Location = new System.Drawing.Point(0, 45);
             this.stdListButton.Name = "stdListButton";
             this.stdListButton.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
             this.stdListButton.Size = new System.Drawing.Size(210, 47);
@@ -277,7 +277,7 @@ namespace Gamey
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.label4);
+            this.panel2.Controls.Add(this.userNameLabel);
             this.panel2.Controls.Add(this.studyMeLabel);
             this.panel2.Controls.Add(this.adminPortalLabel);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
@@ -287,16 +287,17 @@ namespace Gamey
             this.panel2.TabIndex = 0;
             this.panel2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel2_MouseDown);
             // 
-            // label4
+            // userNameLabel
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.SystemColors.Control;
-            this.label4.Location = new System.Drawing.Point(54, 107);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(103, 23);
-            this.label4.TabIndex = 5;
-            this.label4.Text = "Username";
+            this.userNameLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.userNameLabel.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.userNameLabel.ForeColor = System.Drawing.SystemColors.Control;
+            this.userNameLabel.Location = new System.Drawing.Point(55, 104);
+            this.userNameLabel.Name = "userNameLabel";
+            this.userNameLabel.Size = new System.Drawing.Size(103, 23);
+            this.userNameLabel.TabIndex = 5;
+            this.userNameLabel.Text = "Username";
+            this.userNameLabel.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // timeTimer
             // 
@@ -358,7 +359,7 @@ namespace Gamey
         private System.Windows.Forms.Label adminPortalLabel;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label userNameLabel;
         private System.Windows.Forms.Timer timeTimer;
         private System.Windows.Forms.Panel coursePanel;
         private System.Windows.Forms.Button courseListButton;

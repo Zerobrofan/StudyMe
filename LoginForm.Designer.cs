@@ -29,6 +29,7 @@ namespace Gamey
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.exitButton = new System.Windows.Forms.Button();
             this.minButton = new System.Windows.Forms.Button();
             this.gameyLabel = new System.Windows.Forms.Label();
@@ -40,6 +41,8 @@ namespace Gamey
             this.loginButton = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
+            this.timer = new System.Windows.Forms.Timer(this.components);
+            this.capsLabel = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -161,11 +164,27 @@ namespace Gamey
             this.label4.TabIndex = 3;
             this.label4.Text = "A Course Management System";
             // 
+            // timer
+            // 
+            this.timer.Enabled = true;
+            this.timer.Tick += new System.EventHandler(this.timer_Tick);
+            // 
+            // capsLabel
+            // 
+            this.capsLabel.AutoSize = true;
+            this.capsLabel.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.capsLabel.Location = new System.Drawing.Point(341, 257);
+            this.capsLabel.Name = "capsLabel";
+            this.capsLabel.Size = new System.Drawing.Size(101, 16);
+            this.capsLabel.TabIndex = 11;
+            this.capsLabel.Text = "CAPS LOCK is ON";
+            // 
             // LoginForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(782, 354);
+            this.Controls.Add(this.capsLabel);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.loginButton);
             this.Controls.Add(this.passBox);
@@ -200,6 +219,8 @@ namespace Gamey
         private System.Windows.Forms.Button loginButton;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Timer timer;
+        private System.Windows.Forms.Label capsLabel;
     }
 }
 

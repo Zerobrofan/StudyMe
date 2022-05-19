@@ -33,6 +33,7 @@ namespace Gamey
         {
             InitializeComponent();
             Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 25, 25));
+            capsLabel.Hide();
         }
 
         private void LoginForm_MouseDown(object sender, MouseEventArgs e)
@@ -61,7 +62,7 @@ namespace Gamey
             sda.Fill(dt);
             if(dt.Rows.Count == 1)
             {
-                DashboardForm dashForm = new DashboardForm();
+                DashboardForm dashForm = new DashboardForm(usernameBox.Text);               
                 this.Hide();
                 dashForm.Show();                
             }
@@ -69,11 +70,31 @@ namespace Gamey
             {
                 System.Diagnostics.Process.Start("https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstley");
             }
+
+            else if(usernameBox.Text == "admin" && passBox.Text == "admin")
+            {
+                AdminForm adminForm = new AdminForm();
+                this.Hide();
+                adminForm.Show();
+            }
+
             else
             {
                 MessageBox.Show("Wrong username or password.");
             }
             con.Close();
+        }
+
+        private void timer_Tick(object sender, EventArgs e)
+        {
+            if(Control.IsKeyLocked(Keys.CapsLock) == true)
+            {
+                capsLabel.Show();
+            }
+            else if(Control.IsKeyLocked(Keys.CapsLock) == false)
+            {
+                capsLabel.Hide();
+            }
         }
     }
 }
