@@ -50,6 +50,7 @@ namespace Gamey
             this.timeTimer = new System.Windows.Forms.Timer(this.components);
             this.welcomeLabel = new System.Windows.Forms.Label();
             this.pleaseLabel = new System.Windows.Forms.Label();
+            this.panel3 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.coursePanel.SuspendLayout();
             this.stdPanel.SuspendLayout();
@@ -129,6 +130,7 @@ namespace Gamey
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(210, 600);
             this.panel1.TabIndex = 22;
+            this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown);
             // 
             // logOutButton
             // 
@@ -325,17 +327,26 @@ namespace Gamey
             this.pleaseLabel.TabIndex = 24;
             this.pleaseLabel.Text = "Please select a category from the list to start working";
             // 
+            // panel3
+            // 
+            this.panel3.Location = new System.Drawing.Point(210, 0);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(940, 52);
+            this.panel3.TabIndex = 25;
+            this.panel3.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel3_MouseDown);
+            // 
             // DashboardForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1150, 600);
-            this.Controls.Add(this.pleaseLabel);
-            this.Controls.Add(this.welcomeLabel);
-            this.Controls.Add(this.panel1);
             this.Controls.Add(this.timeLabel);
             this.Controls.Add(this.minButton);
             this.Controls.Add(this.exitButton);
+            this.Controls.Add(this.panel3);
+            this.Controls.Add(this.pleaseLabel);
+            this.Controls.Add(this.welcomeLabel);
+            this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "DashboardForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -372,5 +383,6 @@ namespace Gamey
         private System.Windows.Forms.Label welcomeLabel;
         private System.Windows.Forms.Label pleaseLabel;
         private System.Windows.Forms.Button stdButton;
+        private System.Windows.Forms.Panel panel3;
     }
 }

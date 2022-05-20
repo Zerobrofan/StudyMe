@@ -96,5 +96,17 @@ namespace Gamey
                 capsLabel.Hide();
             }
         }
+
+        private void showPassBtn_Click(object sender, EventArgs e)
+        {
+            if(passBox.PasswordChar != '\0')
+            {
+                passBox.PasswordChar = '\0';
+            }
+            else
+            {
+                passBox.PasswordChar = '*';
+            }
+        }
     }
 }

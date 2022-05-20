@@ -16,9 +16,9 @@ namespace Gamey
 
         private void clearButton_Click(object sender, EventArgs e)
         {
-            courseNameBox.Text = "";
-            creditHourBox.Text = "";
-            courseDescBox.Text = "";
+            courseNameBox.Clear();
+            creditHourBox.Clear();
+            courseDescBox.Clear();
         }
 
         private void addButton_Click(object sender, EventArgs e)

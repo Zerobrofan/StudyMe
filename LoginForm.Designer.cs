@@ -43,6 +43,7 @@ namespace Gamey
             this.label4 = new System.Windows.Forms.Label();
             this.timer = new System.Windows.Forms.Timer(this.components);
             this.capsLabel = new System.Windows.Forms.Label();
+            this.showPassBtn = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -179,11 +180,25 @@ namespace Gamey
             this.capsLabel.TabIndex = 11;
             this.capsLabel.Text = "CAPS LOCK is ON";
             // 
+            // showPassBtn
+            // 
+            this.showPassBtn.BackColor = System.Drawing.Color.White;
+            this.showPassBtn.FlatAppearance.BorderSize = 0;
+            this.showPassBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.showPassBtn.Location = new System.Drawing.Point(725, 195);
+            this.showPassBtn.Name = "showPassBtn";
+            this.showPassBtn.Size = new System.Drawing.Size(21, 22);
+            this.showPassBtn.TabIndex = 12;
+            this.showPassBtn.Text = "👁️";
+            this.showPassBtn.UseVisualStyleBackColor = false;
+            this.showPassBtn.Click += new System.EventHandler(this.showPassBtn_Click);
+            // 
             // LoginForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(782, 354);
+            this.Controls.Add(this.showPassBtn);
             this.Controls.Add(this.capsLabel);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.loginButton);
@@ -221,6 +236,7 @@ namespace Gamey
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Timer timer;
         private System.Windows.Forms.Label capsLabel;
+        private System.Windows.Forms.Button showPassBtn;
     }
 }
 

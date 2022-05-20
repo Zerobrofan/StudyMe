@@ -67,6 +67,7 @@ namespace Gamey
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(210, 542);
             this.panel1.TabIndex = 23;
+            this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown);
             // 
             // logOutButton
             // 

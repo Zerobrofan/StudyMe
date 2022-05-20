@@ -43,21 +43,6 @@ namespace Gamey
             coursePanel.Visible = false;
         }
 
-        private void ShowPanel(Panel submenu)
-        {           
-            stdPanel.Visible = false;                    
-            coursePanel.Visible = false;
-
-            if (submenu.Visible == false)
-            {
-                submenu.Visible = true;
-            }
-            else
-            {
-                submenu.Visible = false;
-            }
-        }
-
         private void exitButton_Click(object sender, EventArgs e)
         {
             Application.Exit();
@@ -81,26 +66,12 @@ namespace Gamey
 
         private void stdButton_Click(object sender, EventArgs e)
         {
-            if(stdPanel.Visible == true)
-            {
-                stdPanel.Visible = false;
-            }
-            else 
-            {
-                ShowPanel(stdPanel); 
-            }          
+            stdPanel.Visible = !stdPanel.Visible;
         }
 
         private void courseButton_Click(object sender, EventArgs e)
         {
-            if (coursePanel.Visible == true)
-            {
-                coursePanel.Visible = false;
-            }
-            else
-            {
-                ShowPanel(coursePanel);
-            }            
+            coursePanel.Visible = !coursePanel.Visible;
         }
 
         private void logOutButton_Click(object sender, EventArgs e)
@@ -175,6 +146,18 @@ namespace Gamey
         }
 
         private void panel2_MouseDown(object sender, MouseEventArgs e)
+        {
+            ReleaseCapture();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
+        }
+
+        private void panel1_MouseDown(object sender, MouseEventArgs e)
+        {
+            ReleaseCapture();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
+        }
+
+        private void panel3_MouseDown(object sender, MouseEventArgs e)
         {
             ReleaseCapture();
             SendMessage(this.Handle, 0x112, 0xf012, 0);

@@ -32,12 +32,12 @@ namespace Gamey
 
         private void clearButton_Click(object sender, EventArgs e)
         {
-            nameBox.Text = "";
-            maleButton.Checked = false;
+            nameBox.Clear();
+            maleButton.Checked = true;
             femaleButton.Checked = false;
-            dateBox.Text = "";
-            phoneBox.Text = "";
-            addressBox.Text = "";
+            dateBox.ResetText();
+            phoneBox.Clear();
+            addressBox.Clear();
         }
 
         private void addButton_Click(object sender, EventArgs e)
@@ -67,11 +67,12 @@ namespace Gamey
             }
             Pobulate();
 
-            nameBox.Text = "";
+            nameBox.Clear();
+            maleButton.Checked = true;
             femaleButton.Checked = false;
-            dateBox.Text = "";
-            phoneBox.Text = "";
-            addressBox.Text = "";
+            dateBox.ResetText();
+            phoneBox.Clear();
+            addressBox.Clear();
         }
 
         private void Pobulate()
