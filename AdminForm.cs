@@ -85,6 +85,8 @@ namespace Gamey
 
         private void addButton_Click(object sender, EventArgs e)
         {
+            if (nameBox.Text == "admin" && passBox.Text == "admin")
+                MessageBox.Show("Please choose another username and password");
             try
             {
                 con.Open();
