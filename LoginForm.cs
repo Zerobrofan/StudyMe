@@ -91,7 +91,7 @@ namespace Gamey
             {
                 capsLabel.Show();
             }
-            else if(Control.IsKeyLocked(Keys.CapsLock) == false)
+            else
             {
                 capsLabel.Hide();
             }
@@ -99,14 +99,7 @@ namespace Gamey
 
         private void showPassBtn_Click(object sender, EventArgs e)
         {
-            if(passBox.PasswordChar != '\0')
-            {
-                passBox.PasswordChar = '\0';
-            }
-            else
-            {
-                passBox.PasswordChar = '*';
-            }
+            passBox.UseSystemPasswordChar = !passBox.UseSystemPasswordChar;
         }
 
         private void usernameBox_KeyDown(object sender, KeyEventArgs e)
