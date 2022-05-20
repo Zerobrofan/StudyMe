@@ -117,6 +117,7 @@ namespace Gamey
             this.usernameBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.usernameBox.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.usernameBox.Location = new System.Drawing.Point(463, 148);
+            this.usernameBox.MaxLength = 50;
             this.usernameBox.Name = "usernameBox";
             this.usernameBox.Size = new System.Drawing.Size(283, 22);
             this.usernameBox.TabIndex = 6;
@@ -127,6 +128,7 @@ namespace Gamey
             this.passBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.passBox.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.passBox.Location = new System.Drawing.Point(463, 195);
+            this.passBox.MaxLength = 50;
             this.passBox.Name = "passBox";
             this.passBox.PasswordChar = '*';
             this.passBox.Size = new System.Drawing.Size(283, 22);

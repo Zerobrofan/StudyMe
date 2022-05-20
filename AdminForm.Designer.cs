@@ -217,6 +217,7 @@ namespace Gamey
             // 
             this.nameBox.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.nameBox.Location = new System.Drawing.Point(356, 398);
+            this.nameBox.MaxLength = 50;
             this.nameBox.Name = "nameBox";
             this.nameBox.Size = new System.Drawing.Size(292, 22);
             this.nameBox.TabIndex = 60;
@@ -235,6 +236,7 @@ namespace Gamey
             // 
             this.passBox.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.passBox.Location = new System.Drawing.Point(766, 398);
+            this.passBox.MaxLength = 50;
             this.passBox.Name = "passBox";
             this.passBox.Size = new System.Drawing.Size(336, 22);
             this.passBox.TabIndex = 62;

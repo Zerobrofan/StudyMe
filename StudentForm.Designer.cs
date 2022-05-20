@@ -68,6 +68,7 @@ namespace Gamey
             // 
             this.addressBox.Font = new System.Drawing.Font("Arial", 10F);
             this.addressBox.Location = new System.Drawing.Point(114, 482);
+            this.addressBox.MaxLength = 100;
             this.addressBox.Name = "addressBox";
             this.addressBox.Size = new System.Drawing.Size(370, 23);
             this.addressBox.TabIndex = 53;
@@ -86,6 +87,7 @@ namespace Gamey
             // 
             this.phoneBox.Font = new System.Drawing.Font("Arial", 10F);
             this.phoneBox.Location = new System.Drawing.Point(346, 443);
+            this.phoneBox.MaxLength = 16;
             this.phoneBox.Name = "phoneBox";
             this.phoneBox.Size = new System.Drawing.Size(258, 23);
             this.phoneBox.TabIndex = 51;
@@ -230,6 +232,7 @@ namespace Gamey
             // 
             this.nameBox.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.nameBox.Location = new System.Drawing.Point(100, 402);
+            this.nameBox.MaxLength = 50;
             this.nameBox.Name = "nameBox";
             this.nameBox.Size = new System.Drawing.Size(336, 22);
             this.nameBox.TabIndex = 40;

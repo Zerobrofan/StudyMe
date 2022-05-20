@@ -49,6 +49,7 @@ namespace Gamey
             // 
             this.courseNameBox.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.courseNameBox.Location = new System.Drawing.Point(173, 403);
+            this.courseNameBox.MaxLength = 50;
             this.courseNameBox.Name = "courseNameBox";
             this.courseNameBox.Size = new System.Drawing.Size(336, 22);
             this.courseNameBox.TabIndex = 13;
@@ -102,6 +103,7 @@ namespace Gamey
             // 
             this.creditHourBox.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.creditHourBox.Location = new System.Drawing.Point(659, 403);
+            this.creditHourBox.MaxLength = 3;
             this.creditHourBox.Name = "creditHourBox";
             this.creditHourBox.Size = new System.Drawing.Size(122, 22);
             this.creditHourBox.TabIndex = 29;
@@ -120,8 +122,9 @@ namespace Gamey
             // 
             this.courseDescBox.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.courseDescBox.Location = new System.Drawing.Point(218, 449);
+            this.courseDescBox.MaxLength = 100;
             this.courseDescBox.Name = "courseDescBox";
-            this.courseDescBox.Size = new System.Drawing.Size(336, 22);
+            this.courseDescBox.Size = new System.Drawing.Size(700, 22);
             this.courseDescBox.TabIndex = 31;
             // 
             // label4

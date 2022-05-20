@@ -36,6 +36,9 @@ namespace Gamey
                     SqlCommand cmd = new SqlCommand(query, con);
                     cmd.ExecuteNonQuery();
                     MessageBox.Show("Course added successfully");
+                    courseNameBox.Clear();
+                    creditHourBox.Clear();
+                    courseDescBox.Clear();
 
                 }
                 con.Close();
