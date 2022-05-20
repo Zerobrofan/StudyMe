@@ -120,6 +120,7 @@ namespace Gamey
             this.usernameBox.Name = "usernameBox";
             this.usernameBox.Size = new System.Drawing.Size(283, 22);
             this.usernameBox.TabIndex = 6;
+            this.usernameBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.usernameBox_KeyDown);
             // 
             // passBox
             // 
@@ -130,6 +131,7 @@ namespace Gamey
             this.passBox.PasswordChar = '*';
             this.passBox.Size = new System.Drawing.Size(283, 22);
             this.passBox.TabIndex = 7;
+            this.passBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.passBox_KeyDown);
             // 
             // loginButton
             // 

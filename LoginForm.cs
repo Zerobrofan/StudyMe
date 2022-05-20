@@ -108,5 +108,17 @@ namespace Gamey
                 passBox.PasswordChar = '*';
             }
         }
+
+        private void usernameBox_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+                loginButton.PerformClick();
+        }
+
+        private void passBox_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+                loginButton.PerformClick();
+        }
     }
 }
