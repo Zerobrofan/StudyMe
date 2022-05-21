@@ -84,9 +84,7 @@ namespace Gamey
         }
 
         private void addButton_Click(object sender, EventArgs e)
-        {
-            if (nameBox.Text == "admin" && passBox.Text == "admin")
-                MessageBox.Show("Please choose another username and password");
+        {           
             try
             {
                 con.Open();
@@ -94,9 +92,13 @@ namespace Gamey
                 {
                     MessageBox.Show("Missing fields were found. Please make sure all fields are filled");
                 }
+                else if (nameBox.Text == "admin" && passBox.Text == "admin")
+                {
+                    MessageBox.Show("Please choose another username and password"); 
+                }
                 else
                 {
-                    string query = "insert into adminTable values('" + nameBox.Text + "','" + passBox.Text +  "')";
+                    string query = "insert into adminTable values('" + nameBox.Text + "','" + passBox.Text + "')";
                     SqlCommand cmd = new SqlCommand(query, con);
                     cmd.ExecuteNonQuery();
                     MessageBox.Show("Admin added successfully");
@@ -160,7 +162,7 @@ namespace Gamey
             {
                 if (nameBox.Text == "")
                 {
-                    MessageBox.Show("Please select a admin to delete");
+                    MessageBox.Show("Please select an admin to delete");
                 }
                 else
                 {

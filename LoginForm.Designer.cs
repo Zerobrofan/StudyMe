@@ -30,6 +30,7 @@ namespace Gamey
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LoginForm));
             this.exitButton = new System.Windows.Forms.Button();
             this.minButton = new System.Windows.Forms.Button();
             this.gameyLabel = new System.Windows.Forms.Label();
@@ -214,6 +215,7 @@ namespace Gamey
             this.Controls.Add(this.minButton);
             this.Controls.Add(this.exitButton);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "LoginForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Gamey";

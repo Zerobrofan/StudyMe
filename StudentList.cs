@@ -19,7 +19,7 @@ namespace Gamey
         private void printButton_Click(object sender, EventArgs e)
         {
             printer.Title = "Student list";
-            printer.SubTitle = string.Format("Date: {0}", DateTime.Now.Date);
+            printer.SubTitle = string.Format("Date: {0}", DateTime.Now.ToString());
             printer.SubTitleFormatFlags = StringFormatFlags.LineLimit | StringFormatFlags.NoClip;
             printer.PageNumbers = true;
             printer.PageNumberInHeader = false;
