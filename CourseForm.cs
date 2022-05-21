@@ -32,7 +32,7 @@ namespace Gamey
                 }
                 else
                 {
-                    string query = "insert into courseTable values ('" + courseNameBox.Text + "','" + creditHourBox.Text + "','" + courseDescBox.Text + "')";
+                    string query = "insert into courseTable values ('" + courseNameBox.Text + "','" + creditHourBox.Text + "','" + courseDescBox.Text + "','" +dateBoxStart.Text + "','" + dateBoxEnd.Text + "')";
                     SqlCommand cmd = new SqlCommand(query, con);
                     cmd.ExecuteNonQuery();
                     MessageBox.Show("Course added successfully");
@@ -75,11 +75,13 @@ namespace Gamey
                 else
                 {
                     con.Open();
-                    string query = "update courseTable set CourseName=@name,CreditHours=@credit,CourseDesc=@desc where CourseName=@name";
+                    string query = "update courseTable set CourseName=@name,CreditHours=@credit,CourseDesc=@desc,StartingDate=@start,EndingDate=@end where CourseName=@name";
                     SqlCommand cmd = new SqlCommand(query, con);
                     cmd.Parameters.AddWithValue("@name", courseNameBox.Text);
                     cmd.Parameters.AddWithValue("@credit", creditHourBox.Text);
                     cmd.Parameters.AddWithValue("@desc", courseDescBox.Text);
+                    cmd.Parameters.AddWithValue("@start", dateBoxStart.Text);
+                    cmd.Parameters.AddWithValue("@end", dateBoxEnd.Text);
                     cmd.ExecuteNonQuery();
                     MessageBox.Show("Course updated successfully");
                     con.Close();
@@ -131,6 +133,8 @@ namespace Gamey
                 courseNameBox.Text = courseRow.Cells[0].Value.ToString();
                 creditHourBox.Text = courseRow.Cells[1].Value.ToString();
                 courseDescBox.Text = courseRow.Cells[2].Value.ToString();
+                dateBoxStart.Text = courseRow.Cells[3].Value.ToString();
+                dateBoxEnd.Text = courseRow.Cells[4].Value.ToString();
             }
         }
 

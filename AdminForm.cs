@@ -100,6 +100,8 @@ namespace Gamey
                     SqlCommand cmd = new SqlCommand(query, con);
                     cmd.ExecuteNonQuery();
                     MessageBox.Show("Admin added successfully");
+                    nameBox.Clear();
+                    passBox.Clear();
 
                 }
                 con.Close();
@@ -189,6 +191,12 @@ namespace Gamey
         }
 
         private void panel1_MouseDown(object sender, MouseEventArgs e)
+        {
+            ReleaseCapture();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
+        }
+
+        private void AdminForm_MouseDown(object sender, MouseEventArgs e)
         {
             ReleaseCapture();
             SendMessage(this.Handle, 0x112, 0xf012, 0);

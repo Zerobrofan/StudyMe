@@ -315,8 +315,10 @@ namespace Gamey
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "AdminForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AdminForm";
             this.Load += new System.EventHandler(this.AdminForm_Load);
+            this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.AdminForm_MouseDown);
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();

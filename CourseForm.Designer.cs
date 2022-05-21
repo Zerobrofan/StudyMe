@@ -42,13 +42,17 @@ namespace Gamey
             this.editButton = new System.Windows.Forms.Button();
             this.deleteButton = new System.Windows.Forms.Button();
             this.addButton = new System.Windows.Forms.Button();
+            this.label5 = new System.Windows.Forms.Label();
+            this.dateBoxStart = new System.Windows.Forms.DateTimePicker();
+            this.dateBoxEnd = new System.Windows.Forms.DateTimePicker();
+            this.label6 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.courseGrid)).BeginInit();
             this.SuspendLayout();
             // 
             // courseNameBox
             // 
             this.courseNameBox.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.courseNameBox.Location = new System.Drawing.Point(173, 403);
+            this.courseNameBox.Location = new System.Drawing.Point(173, 396);
             this.courseNameBox.MaxLength = 50;
             this.courseNameBox.Name = "courseNameBox";
             this.courseNameBox.Size = new System.Drawing.Size(336, 22);
@@ -58,7 +62,7 @@ namespace Gamey
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 13F, System.Drawing.FontStyle.Bold);
-            this.label2.Location = new System.Drawing.Point(30, 403);
+            this.label2.Location = new System.Drawing.Point(30, 396);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(137, 22);
             this.label2.TabIndex = 12;
@@ -102,7 +106,7 @@ namespace Gamey
             // creditHourBox
             // 
             this.creditHourBox.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.creditHourBox.Location = new System.Drawing.Point(659, 403);
+            this.creditHourBox.Location = new System.Drawing.Point(659, 396);
             this.creditHourBox.MaxLength = 3;
             this.creditHourBox.Name = "creditHourBox";
             this.creditHourBox.Size = new System.Drawing.Size(122, 22);
@@ -112,7 +116,7 @@ namespace Gamey
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 13F, System.Drawing.FontStyle.Bold);
-            this.label1.Location = new System.Drawing.Point(531, 403);
+            this.label1.Location = new System.Drawing.Point(531, 396);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(122, 22);
             this.label1.TabIndex = 28;
@@ -121,7 +125,7 @@ namespace Gamey
             // courseDescBox
             // 
             this.courseDescBox.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.courseDescBox.Location = new System.Drawing.Point(218, 449);
+            this.courseDescBox.Location = new System.Drawing.Point(218, 442);
             this.courseDescBox.MaxLength = 100;
             this.courseDescBox.Name = "courseDescBox";
             this.courseDescBox.Size = new System.Drawing.Size(700, 22);
@@ -131,7 +135,7 @@ namespace Gamey
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Century Gothic", 13F, System.Drawing.FontStyle.Bold);
-            this.label4.Location = new System.Drawing.Point(30, 449);
+            this.label4.Location = new System.Drawing.Point(30, 442);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(182, 22);
             this.label4.TabIndex = 30;
@@ -141,7 +145,7 @@ namespace Gamey
             // 
             this.clearButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.clearButton.Font = new System.Drawing.Font("Century Gothic", 12F);
-            this.clearButton.Location = new System.Drawing.Point(423, 509);
+            this.clearButton.Location = new System.Drawing.Point(423, 535);
             this.clearButton.Name = "clearButton";
             this.clearButton.Size = new System.Drawing.Size(117, 39);
             this.clearButton.TabIndex = 37;
@@ -153,7 +157,7 @@ namespace Gamey
             // 
             this.editButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.editButton.Font = new System.Drawing.Font("Century Gothic", 12F);
-            this.editButton.Location = new System.Drawing.Point(669, 509);
+            this.editButton.Location = new System.Drawing.Point(669, 535);
             this.editButton.Name = "editButton";
             this.editButton.Size = new System.Drawing.Size(117, 39);
             this.editButton.TabIndex = 36;
@@ -165,7 +169,7 @@ namespace Gamey
             // 
             this.deleteButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.deleteButton.Font = new System.Drawing.Font("Century Gothic", 12F);
-            this.deleteButton.Location = new System.Drawing.Point(792, 509);
+            this.deleteButton.Location = new System.Drawing.Point(792, 535);
             this.deleteButton.Name = "deleteButton";
             this.deleteButton.Size = new System.Drawing.Size(117, 39);
             this.deleteButton.TabIndex = 35;
@@ -177,7 +181,7 @@ namespace Gamey
             // 
             this.addButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.addButton.Font = new System.Drawing.Font("Century Gothic", 12F);
-            this.addButton.Location = new System.Drawing.Point(546, 509);
+            this.addButton.Location = new System.Drawing.Point(546, 535);
             this.addButton.Name = "addButton";
             this.addButton.Size = new System.Drawing.Size(117, 39);
             this.addButton.TabIndex = 34;
@@ -185,11 +189,57 @@ namespace Gamey
             this.addButton.UseVisualStyleBackColor = true;
             this.addButton.Click += new System.EventHandler(this.addButton_Click);
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Century Gothic", 13F, System.Drawing.FontStyle.Bold);
+            this.label5.Location = new System.Drawing.Point(30, 484);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(126, 22);
+            this.label5.TabIndex = 38;
+            this.label5.Text = "Starting Date:";
+            // 
+            // dateBoxStart
+            // 
+            this.dateBoxStart.CustomFormat = "yyyy-MM-dd";
+            this.dateBoxStart.Font = new System.Drawing.Font("Arial", 9.75F);
+            this.dateBoxStart.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dateBoxStart.Location = new System.Drawing.Point(162, 484);
+            this.dateBoxStart.MinDate = new System.DateTime(1950, 1, 1, 0, 0, 0, 0);
+            this.dateBoxStart.Name = "dateBoxStart";
+            this.dateBoxStart.Size = new System.Drawing.Size(237, 22);
+            this.dateBoxStart.TabIndex = 48;
+            // 
+            // dateBoxEnd
+            // 
+            this.dateBoxEnd.CustomFormat = "yyyy-MM-dd";
+            this.dateBoxEnd.Font = new System.Drawing.Font("Arial", 9.75F);
+            this.dateBoxEnd.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dateBoxEnd.Location = new System.Drawing.Point(544, 484);
+            this.dateBoxEnd.MinDate = new System.DateTime(1950, 1, 1, 0, 0, 0, 0);
+            this.dateBoxEnd.Name = "dateBoxEnd";
+            this.dateBoxEnd.Size = new System.Drawing.Size(237, 22);
+            this.dateBoxEnd.TabIndex = 50;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Century Gothic", 13F, System.Drawing.FontStyle.Bold);
+            this.label6.Location = new System.Drawing.Point(417, 484);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(121, 22);
+            this.label6.TabIndex = 49;
+            this.label6.Text = "Ending Date:";
+            // 
             // CourseForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(940, 600);
+            this.Controls.Add(this.dateBoxEnd);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.dateBoxStart);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.clearButton);
             this.Controls.Add(this.editButton);
             this.Controls.Add(this.deleteButton);
@@ -232,5 +282,9 @@ namespace Gamey
         private System.Windows.Forms.Button editButton;
         private System.Windows.Forms.Button deleteButton;
         private System.Windows.Forms.Button addButton;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.DateTimePicker dateBoxStart;
+        private System.Windows.Forms.DateTimePicker dateBoxEnd;
+        private System.Windows.Forms.Label label6;
     }
 }
