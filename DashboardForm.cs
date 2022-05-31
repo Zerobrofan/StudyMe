@@ -33,16 +33,6 @@ namespace Gamey
             coursePanel.Visible = false;
         }
 
-        public DashboardForm()
-        {
-            InitializeComponent();
-            Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 25, 25));
-            timeTimer.Start();
-
-            stdPanel.Visible = false;
-            coursePanel.Visible = false;
-        }
-
         private void exitButton_Click(object sender, EventArgs e)
         {
             Application.Exit();
@@ -117,7 +107,6 @@ namespace Gamey
         {
             welcomeLabel.Text = "";
             pleaseLabel.Text = "";
-
             if (ActiveMdiChild != null)
                 ActiveMdiChild.Close();
 

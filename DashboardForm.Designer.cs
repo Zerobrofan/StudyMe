@@ -62,9 +62,10 @@ namespace Gamey
             // 
             this.timeLabel.AutoSize = true;
             this.timeLabel.Font = new System.Drawing.Font("Century Gothic", 14F);
-            this.timeLabel.Location = new System.Drawing.Point(1007, 20);
+            this.timeLabel.Location = new System.Drawing.Point(1343, 25);
+            this.timeLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.timeLabel.Name = "timeLabel";
-            this.timeLabel.Size = new System.Drawing.Size(59, 22);
+            this.timeLabel.Size = new System.Drawing.Size(72, 30);
             this.timeLabel.TabIndex = 1;
             this.timeLabel.Text = "22:33";
             // 
@@ -73,9 +74,10 @@ namespace Gamey
             this.exitButton.FlatAppearance.BorderSize = 0;
             this.exitButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.exitButton.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.exitButton.Location = new System.Drawing.Point(1108, 12);
+            this.exitButton.Location = new System.Drawing.Point(1477, 15);
+            this.exitButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.exitButton.Name = "exitButton";
-            this.exitButton.Size = new System.Drawing.Size(30, 30);
+            this.exitButton.Size = new System.Drawing.Size(40, 37);
             this.exitButton.TabIndex = 1;
             this.exitButton.Text = "X";
             this.exitButton.UseVisualStyleBackColor = true;
@@ -86,9 +88,10 @@ namespace Gamey
             this.minButton.FlatAppearance.BorderSize = 0;
             this.minButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.minButton.Font = new System.Drawing.Font("Century Gothic", 8.25F);
-            this.minButton.Location = new System.Drawing.Point(1072, 12);
+            this.minButton.Location = new System.Drawing.Point(1429, 15);
+            this.minButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.minButton.Name = "minButton";
-            this.minButton.Size = new System.Drawing.Size(30, 30);
+            this.minButton.Size = new System.Drawing.Size(40, 37);
             this.minButton.TabIndex = 2;
             this.minButton.Text = "_";
             this.minButton.UseVisualStyleBackColor = true;
@@ -99,9 +102,10 @@ namespace Gamey
             this.studyMeLabel.AutoSize = true;
             this.studyMeLabel.Font = new System.Drawing.Font("Century Gothic", 30F, System.Drawing.FontStyle.Bold);
             this.studyMeLabel.ForeColor = System.Drawing.SystemColors.Control;
-            this.studyMeLabel.Location = new System.Drawing.Point(12, 31);
+            this.studyMeLabel.Location = new System.Drawing.Point(16, 38);
+            this.studyMeLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.studyMeLabel.Name = "studyMeLabel";
-            this.studyMeLabel.Size = new System.Drawing.Size(188, 47);
+            this.studyMeLabel.Size = new System.Drawing.Size(235, 59);
             this.studyMeLabel.TabIndex = 3;
             this.studyMeLabel.Text = "StudyMe";
             // 
@@ -110,9 +114,10 @@ namespace Gamey
             this.adminPortalLabel.AutoSize = true;
             this.adminPortalLabel.Font = new System.Drawing.Font("Century Gothic", 12F);
             this.adminPortalLabel.ForeColor = System.Drawing.SystemColors.Control;
-            this.adminPortalLabel.Location = new System.Drawing.Point(40, 78);
+            this.adminPortalLabel.Location = new System.Drawing.Point(53, 96);
+            this.adminPortalLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.adminPortalLabel.Name = "adminPortalLabel";
-            this.adminPortalLabel.Size = new System.Drawing.Size(132, 21);
+            this.adminPortalLabel.Size = new System.Drawing.Size(156, 23);
             this.adminPortalLabel.TabIndex = 4;
             this.adminPortalLabel.Text = "ADMIN PORTAL";
             // 
@@ -128,8 +133,9 @@ namespace Gamey
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(210, 600);
+            this.panel1.Size = new System.Drawing.Size(280, 738);
             this.panel1.TabIndex = 22;
             this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown);
             // 
@@ -140,10 +146,11 @@ namespace Gamey
             this.logOutButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.logOutButton.Font = new System.Drawing.Font("Century Gothic", 14F);
             this.logOutButton.ForeColor = System.Drawing.SystemColors.Control;
-            this.logOutButton.Location = new System.Drawing.Point(0, 553);
+            this.logOutButton.Location = new System.Drawing.Point(0, 680);
+            this.logOutButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.logOutButton.Name = "logOutButton";
-            this.logOutButton.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.logOutButton.Size = new System.Drawing.Size(210, 47);
+            this.logOutButton.Padding = new System.Windows.Forms.Padding(13, 0, 0, 0);
+            this.logOutButton.Size = new System.Drawing.Size(280, 58);
             this.logOutButton.TabIndex = 9;
             this.logOutButton.Text = "Log Out";
             this.logOutButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -156,9 +163,10 @@ namespace Gamey
             this.coursePanel.Controls.Add(this.courseListButton);
             this.coursePanel.Controls.Add(this.courseManageButton);
             this.coursePanel.Dock = System.Windows.Forms.DockStyle.Top;
-            this.coursePanel.Location = new System.Drawing.Point(0, 356);
+            this.coursePanel.Location = new System.Drawing.Point(0, 438);
+            this.coursePanel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.coursePanel.Name = "coursePanel";
-            this.coursePanel.Size = new System.Drawing.Size(210, 93);
+            this.coursePanel.Size = new System.Drawing.Size(280, 114);
             this.coursePanel.TabIndex = 6;
             // 
             // courseListButton
@@ -169,10 +177,11 @@ namespace Gamey
             this.courseListButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.courseListButton.Font = new System.Drawing.Font("Century Gothic", 12F);
             this.courseListButton.ForeColor = System.Drawing.SystemColors.Control;
-            this.courseListButton.Location = new System.Drawing.Point(0, 47);
+            this.courseListButton.Location = new System.Drawing.Point(0, 58);
+            this.courseListButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.courseListButton.Name = "courseListButton";
-            this.courseListButton.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
-            this.courseListButton.Size = new System.Drawing.Size(210, 47);
+            this.courseListButton.Padding = new System.Windows.Forms.Padding(40, 0, 0, 0);
+            this.courseListButton.Size = new System.Drawing.Size(280, 58);
             this.courseListButton.TabIndex = 2;
             this.courseListButton.Text = "Course List";
             this.courseListButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -188,9 +197,10 @@ namespace Gamey
             this.courseManageButton.Font = new System.Drawing.Font("Century Gothic", 12F);
             this.courseManageButton.ForeColor = System.Drawing.SystemColors.Control;
             this.courseManageButton.Location = new System.Drawing.Point(0, 0);
+            this.courseManageButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.courseManageButton.Name = "courseManageButton";
-            this.courseManageButton.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
-            this.courseManageButton.Size = new System.Drawing.Size(210, 47);
+            this.courseManageButton.Padding = new System.Windows.Forms.Padding(40, 0, 0, 0);
+            this.courseManageButton.Size = new System.Drawing.Size(280, 58);
             this.courseManageButton.TabIndex = 1;
             this.courseManageButton.Text = "Manage Courses";
             this.courseManageButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -204,10 +214,11 @@ namespace Gamey
             this.courseButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.courseButton.Font = new System.Drawing.Font("Century Gothic", 14F);
             this.courseButton.ForeColor = System.Drawing.SystemColors.Control;
-            this.courseButton.Location = new System.Drawing.Point(0, 309);
+            this.courseButton.Location = new System.Drawing.Point(0, 380);
+            this.courseButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.courseButton.Name = "courseButton";
-            this.courseButton.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.courseButton.Size = new System.Drawing.Size(210, 47);
+            this.courseButton.Padding = new System.Windows.Forms.Padding(13, 0, 0, 0);
+            this.courseButton.Size = new System.Drawing.Size(280, 58);
             this.courseButton.TabIndex = 5;
             this.courseButton.Text = "Course";
             this.courseButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -220,9 +231,10 @@ namespace Gamey
             this.stdPanel.Controls.Add(this.stdListButton);
             this.stdPanel.Controls.Add(this.stdManageButton);
             this.stdPanel.Dock = System.Windows.Forms.DockStyle.Top;
-            this.stdPanel.Location = new System.Drawing.Point(0, 217);
+            this.stdPanel.Location = new System.Drawing.Point(0, 267);
+            this.stdPanel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.stdPanel.Name = "stdPanel";
-            this.stdPanel.Size = new System.Drawing.Size(210, 92);
+            this.stdPanel.Size = new System.Drawing.Size(280, 113);
             this.stdPanel.TabIndex = 4;
             // 
             // stdListButton
@@ -233,10 +245,11 @@ namespace Gamey
             this.stdListButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.stdListButton.Font = new System.Drawing.Font("Century Gothic", 12F);
             this.stdListButton.ForeColor = System.Drawing.SystemColors.Control;
-            this.stdListButton.Location = new System.Drawing.Point(0, 45);
+            this.stdListButton.Location = new System.Drawing.Point(0, 55);
+            this.stdListButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.stdListButton.Name = "stdListButton";
-            this.stdListButton.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
-            this.stdListButton.Size = new System.Drawing.Size(210, 47);
+            this.stdListButton.Padding = new System.Windows.Forms.Padding(40, 0, 0, 0);
+            this.stdListButton.Size = new System.Drawing.Size(280, 58);
             this.stdListButton.TabIndex = 2;
             this.stdListButton.Text = "Student List";
             this.stdListButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -252,9 +265,10 @@ namespace Gamey
             this.stdManageButton.Font = new System.Drawing.Font("Century Gothic", 12F);
             this.stdManageButton.ForeColor = System.Drawing.SystemColors.Control;
             this.stdManageButton.Location = new System.Drawing.Point(0, 0);
+            this.stdManageButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.stdManageButton.Name = "stdManageButton";
-            this.stdManageButton.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
-            this.stdManageButton.Size = new System.Drawing.Size(210, 47);
+            this.stdManageButton.Padding = new System.Windows.Forms.Padding(40, 0, 0, 0);
+            this.stdManageButton.Size = new System.Drawing.Size(280, 58);
             this.stdManageButton.TabIndex = 1;
             this.stdManageButton.Text = "Manage Students";
             this.stdManageButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -268,10 +282,11 @@ namespace Gamey
             this.stdButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.stdButton.Font = new System.Drawing.Font("Century Gothic", 14F);
             this.stdButton.ForeColor = System.Drawing.SystemColors.Control;
-            this.stdButton.Location = new System.Drawing.Point(0, 170);
+            this.stdButton.Location = new System.Drawing.Point(0, 209);
+            this.stdButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.stdButton.Name = "stdButton";
-            this.stdButton.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.stdButton.Size = new System.Drawing.Size(210, 47);
+            this.stdButton.Padding = new System.Windows.Forms.Padding(13, 0, 0, 0);
+            this.stdButton.Size = new System.Drawing.Size(280, 58);
             this.stdButton.TabIndex = 3;
             this.stdButton.Text = "Student";
             this.stdButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -285,8 +300,9 @@ namespace Gamey
             this.panel2.Controls.Add(this.adminPortalLabel);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(210, 170);
+            this.panel2.Size = new System.Drawing.Size(280, 209);
             this.panel2.TabIndex = 0;
             this.panel2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel2_MouseDown);
             // 
@@ -295,9 +311,10 @@ namespace Gamey
             this.userNameLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.userNameLabel.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.userNameLabel.ForeColor = System.Drawing.SystemColors.Control;
-            this.userNameLabel.Location = new System.Drawing.Point(55, 104);
+            this.userNameLabel.Location = new System.Drawing.Point(73, 128);
+            this.userNameLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.userNameLabel.Name = "userNameLabel";
-            this.userNameLabel.Size = new System.Drawing.Size(103, 23);
+            this.userNameLabel.Size = new System.Drawing.Size(137, 28);
             this.userNameLabel.TabIndex = 5;
             this.userNameLabel.Text = "Username";
             this.userNameLabel.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -311,9 +328,10 @@ namespace Gamey
             this.welcomeLabel.AutoSize = true;
             this.welcomeLabel.Font = new System.Drawing.Font("Century Gothic", 30F, System.Drawing.FontStyle.Bold);
             this.welcomeLabel.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.welcomeLabel.Location = new System.Drawing.Point(547, 217);
+            this.welcomeLabel.Location = new System.Drawing.Point(729, 267);
+            this.welcomeLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.welcomeLabel.Name = "welcomeLabel";
-            this.welcomeLabel.Size = new System.Drawing.Size(219, 47);
+            this.welcomeLabel.Size = new System.Drawing.Size(271, 59);
             this.welcomeLabel.TabIndex = 23;
             this.welcomeLabel.Text = "Welcome!";
             // 
@@ -322,25 +340,27 @@ namespace Gamey
             this.pleaseLabel.AutoSize = true;
             this.pleaseLabel.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.pleaseLabel.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.pleaseLabel.Location = new System.Drawing.Point(412, 276);
+            this.pleaseLabel.Location = new System.Drawing.Point(549, 340);
+            this.pleaseLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.pleaseLabel.Name = "pleaseLabel";
-            this.pleaseLabel.Size = new System.Drawing.Size(488, 22);
+            this.pleaseLabel.Size = new System.Drawing.Size(639, 30);
             this.pleaseLabel.TabIndex = 24;
             this.pleaseLabel.Text = "Please select a category from the list to start working";
             // 
             // panel3
             // 
-            this.panel3.Location = new System.Drawing.Point(210, 0);
+            this.panel3.Location = new System.Drawing.Point(280, 0);
+            this.panel3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(940, 52);
+            this.panel3.Size = new System.Drawing.Size(1253, 63);
             this.panel3.TabIndex = 25;
             this.panel3.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel3_MouseDown);
             // 
             // DashboardForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1150, 600);
+            this.ClientSize = new System.Drawing.Size(1533, 738);
             this.Controls.Add(this.timeLabel);
             this.Controls.Add(this.minButton);
             this.Controls.Add(this.exitButton);
@@ -350,6 +370,7 @@ namespace Gamey
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "DashboardForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = " ";

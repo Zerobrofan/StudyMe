@@ -1,12 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Drawing;
-using System.Linq;
 using System.Runtime.InteropServices;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
 
@@ -53,6 +48,7 @@ namespace Gamey
         }
 
         SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\StudyMe\StudyMeDB.mdf;Integrated Security=True;Connect Timeout=30");
+
         private void loginButton_Click(object sender, EventArgs e)
         {
             con.Open();
@@ -65,10 +61,6 @@ namespace Gamey
                 DashboardForm dashForm = new DashboardForm(usernameBox.Text);               
                 this.Hide();
                 dashForm.Show();                
-            }
-            else if (usernameBox.Text == "Rick Astely" && passBox.Text =="nevergonnagiveyouup")
-            {
-                System.Diagnostics.Process.Start("https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstley");
             }
 
             else if(usernameBox.Text == "admin" && passBox.Text == "admin")
@@ -102,13 +94,7 @@ namespace Gamey
             passBox.UseSystemPasswordChar = !passBox.UseSystemPasswordChar;
         }
 
-        private void usernameBox_KeyDown(object sender, KeyEventArgs e)
-        {
-            if (e.KeyCode == Keys.Enter)
-                loginButton.PerformClick();
-        }
-
-        private void passBox_KeyDown(object sender, KeyEventArgs e)
+        private void passBox_KeyUp(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
                 loginButton.PerformClick();

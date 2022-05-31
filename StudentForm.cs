@@ -18,7 +18,6 @@ namespace Gamey
             con.Open();
             string query = "select * from stuTable";
             SqlDataAdapter sda = new SqlDataAdapter(query, con);
-            SqlCommandBuilder scd = new SqlCommandBuilder(sda);
             DataSet ds = new DataSet();
             BindingSource bs = new BindingSource();
             sda.Fill(ds);
@@ -80,7 +79,6 @@ namespace Gamey
             con.Open();
             string query = "select * from stuTable";
             SqlDataAdapter sda = new SqlDataAdapter(query, con);
-            SqlCommandBuilder scd = new SqlCommandBuilder(sda);
             DataSet ds = new DataSet();
             BindingSource bs = new BindingSource();
             sda.Fill(ds);
@@ -98,7 +96,6 @@ namespace Gamey
             SqlCommand cmd = new SqlCommand(query, con);
             SqlDataAdapter sda = new SqlDataAdapter(cmd);
             DataSet ds = new DataSet();
-            BindingSource bs = new BindingSource();
             sda.Fill(ds);
             cmd.ExecuteNonQuery();
             con.Close();

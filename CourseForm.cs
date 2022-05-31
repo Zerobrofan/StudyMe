@@ -55,7 +55,6 @@ namespace Gamey
             con.Open();
             string query = "select * from courseTable";
             SqlDataAdapter sda = new SqlDataAdapter(query, con);
-            SqlCommandBuilder scd = new SqlCommandBuilder(sda);
             DataSet ds = new DataSet();
             BindingSource bs = new BindingSource();
             sda.Fill(ds);
