@@ -28,7 +28,7 @@ From here you can add a new user or you can just go back to the login page and e
 
 ***Note:*** *login information is case sensitive so be sure you're entering it correctly. The login screen has a **CAPS LOCK** notification to alarm you if caps lock is active or not.*
 
-After entering a valid username and passowrd you will be greeted with a welcome page and a side bar by which you can access the other pages by clicking on the corresponding button. You can also choose to log out and enter as another user. You'll see the name change at the top right of the app windows to the current signed in user.  
+After entering a valid username and passowrd you will be greeted with a welcome page and a side bar by which you can access the other pages by clicking on the corresponding button. You can also choose to log out and enter as another user. You'll see the name change at the top right of the app window to the current signed in user.  
 
 ![Welcome Page](https://user-images.githubusercontent.com/100843256/193436128-dadbc73d-922b-4771-846b-3bf9804f2bbf.PNG)
 
