@@ -1,8 +1,8 @@
-# 🏫 StudyMe
+# 🏫 StudyMe - Course Management System
 StudyMe is a desktop application, course management system (CMS) designed to make it easy for course centers to synchronize their students with their courses.
 
 ## ⚙ Technologies used:
-- Visual Studio
+- Visual Studio 2019
 - C#
 - SQL
 - MySQL Database
