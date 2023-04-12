@@ -40,12 +40,14 @@ After entering a valid username and passowrd you will be greeted with a welcome 
 
 The buttons can be expanded to reveal further functionalities.
 
-## 📷 Example Photos: 
-<img src="https://user-images.githubusercontent.com/100843256/193436147-980ee0ac-0603-4a57-8b58-a25dfca334d7.PNG" width="800">
-<img src="https://user-images.githubusercontent.com/100843256/228916312-befed00e-87cc-44e7-9453-6cf0695fd4a6.PNG" width="800">
-<img src="https://user-images.githubusercontent.com/100843256/228916326-bdb1561d-b10e-4665-a7ba-50413b8733a0.PNG" width="800">
-<img src="https://user-images.githubusercontent.com/100843256/228916347-4c5cbdc4-53a8-42bb-bacc-55c422bfb845.PNG" width="800">
-<img src="https://user-images.githubusercontent.com/100843256/228916364-939895ae-8051-4ea7-af63-60b50327d16f.PNG" width="800">
+## 📷 Previews: 
+<img src="https://user-images.githubusercontent.com/100843256/193436147-980ee0ac-0603-4a57-8b58-a25dfca334d7.PNG" width="500">
+<img src="https://user-images.githubusercontent.com/100843256/228916312-befed00e-87cc-44e7-9453-6cf0695fd4a6.PNG" width="500">
+<img src="https://user-images.githubusercontent.com/100843256/228916326-bdb1561d-b10e-4665-a7ba-50413b8733a0.PNG" width="500">
+<img src="https://user-images.githubusercontent.com/100843256/228916347-4c5cbdc4-53a8-42bb-bacc-55c422bfb845.PNG" width="500">
+<img src="https://user-images.githubusercontent.com/100843256/228916364-939895ae-8051-4ea7-af63-60b50327d16f.PNG" width="500">
+
+[Check out a demo video here!](https://www.youtube.com/watch?v=HT4egJlm0-I&feature=youtu.be&ab_channel=Zerobrofan)
 
 
 ## 🎊 Voila!
