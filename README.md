@@ -1,6 +1,12 @@
 # 🏫 StudyMe
 StudyMe is a desktop application, course management system (CMS) desinged to make it easy for course centers to synchronize their students with their courses. This app was made as project for college and is my first ever functional application. This project was made using Visual Studio 2022 and C#.
 
+## ⚙ Technologies used:
+- Visual Studio 2022
+- C#
+- SQL
+- MySQL Database
+
 ## 💻 How To  Use:
 
 ### Installation
