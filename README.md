@@ -2,7 +2,7 @@
 <div align="center" id="top">
   <img src="https://github.com/Zerobrofan/StudyMe/assets/100843256/c9748907-26e3-460b-972d-5b1647228401" width="900" alt="StudyMe" />
 
-  <a href="https://youtu.be/HT4egJlm0-I">🎥 View Demo Video Here -></a>;
+  <a href="https://youtu.be/HT4egJlm0-I">🎥 View Demo Video Here -></a>
 </div>
 
 ---
