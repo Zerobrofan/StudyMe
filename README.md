@@ -1,7 +1,7 @@
 # 🏫 StudyMe - Course Management System
 <div align="center" id="top">
-  <img src="https://github.com/Zerobrofan/StudyMe/assets/100843256/c9748907-26e3-460b-972d-5b1647228401" width="900" alt="StudyMe" />
-
+  <img src="https://github.com/Zerobrofan/StudyMe/assets/100843256/efe88148-9601-41cb-beeb-5746ef19a582" width="800" alt="StudyMe" />
+<br><br>
   <a href="https://youtu.be/HT4egJlm0-I">🎥 View Demo Video Here -></a>
 </div>
 
