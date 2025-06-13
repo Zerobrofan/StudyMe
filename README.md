@@ -60,9 +60,10 @@ The buttons can be expanded to reveal further functionalities.
 
 ---
 
-Thanks for visiting this repo! 🌟
-
-
 ## 🎊 Voila!
 Now you can use the app as you would like!  
 Explore the functions of the program and let me know if you encounter ant bugs or issues.
+
+---
+
+Thank You for visiting this repo! 🌟
