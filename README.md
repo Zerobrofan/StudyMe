@@ -58,6 +58,10 @@ The buttons can be expanded to reveal further functionalities.
 
 [Check out a demo video here!](https://www.youtube.com/watch?v=HT4egJlm0-I&feature=youtu.be&ab_channel=Zerobrofan)
 
+---
+
+Thanks for visiting this repo! 🌟
+
 
 ## 🎊 Voila!
 Now you can use the app as you would like!  
